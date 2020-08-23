@@ -1,0 +1,13 @@
+:root{
+    --primary-color:rgba(4, 92, 10, 0.9);
+    --secondary-color:rgba(82, 211, 82, 0.75);
+    --overlay-color:rgba(13, 116, 0, 0.95);
+    --scores-color: rgba(0, 43, 12, 0.95); 
+    --menu-speed:0.75s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
