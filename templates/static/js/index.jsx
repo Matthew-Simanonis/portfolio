@@ -1,5 +1,6 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import routes from "./routes";
+import React from "react";
+//Import App
+import App from "./App"
 
-ReactDOM.render(routes, document.getElementById("content"));
+ReactDOM.render(App, document.querySelector("#content"));

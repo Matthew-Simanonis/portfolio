@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    background: rgb(55, 82, 78);
+    color: white;
+    min-height: 100vh;
+}
