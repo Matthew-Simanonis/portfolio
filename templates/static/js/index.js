@@ -3,4 +3,4 @@ import React from "react";
 //Import App
 import App from "./App"
 
-ReactDOM.render(<App/>, document.querySelector("#root"));
+ReactDOM.render(<App />, document.querySelector("#content"));

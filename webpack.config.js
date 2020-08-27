@@ -1,43 +1,25 @@
-
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.[hash].js",
-    path: path.resolve(__dirname, "dist"),
+const webpack = require('webpack');
+const config = {
+        devtool: 'eval-source-map',
+ entry: __dirname + '/templates/static/js/index.js',
+ output:{
+  path: __dirname + '/templates/public/js',
+  filename: 'bundle.js',
+},
+ resolve: {
+  extensions: ['.js','.jsx','.css']
+ },
+ module: {
+  rules: [
+  {
+   test: /\.jsx?/,
+   loader: 'babel-loader',
+   exclude: /node_modules/,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
-  resolve: {
-    modules: [__dirname, "src", "node_modules"],
-    extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: require.resolve("babel-loader"),
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.png|svg|jpg|gif$/,
-        use: ["file-loader"],
-      },
-      {
-          test: /\.(png|svg|jpg|gif)$/,
-          use: [
-              'file-loader'
-          ]
-      }
-    ],
-  },
+  {
+         test: /\.css$/,
+         loader: 'style-loader!css-loader?modules'
+  }]
+}
 };
+module.exports = config;
