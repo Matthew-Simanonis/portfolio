@@ -1,22 +1,35 @@
-import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
-import "./styles/App.css"
+import React, {useState} from 'react';
 
 //Import Components
 import Nav from './components/Nav'
-import project from './components/project'
+import Projects from './components/projects'
 
 
-export default (
-    function App () {
+function App() {
+    const [counter, setCounter] = useState(0);
+    const [toggle, setToggle] = useState(false);
+
+
+    const toggler = () => {
+        setToggle((prev) => !prev);
+    }
+
+    const incrementer = () => {
+        setCounter(counter + 1);
+    }
+
     return (
-    <HashRouter>
-     <div className="App">
-         <div className="home">
-            <Route path='/' component={Nav} />
-            <Route path='/' component={project} />
+        <div className="App">
+            <div className="home">
+                <Nav />
+                <Projects var1={counter}/>
+                <h1 className={toggle ? "active" : ""}>Hello Boy</h1>
+                <h2>Counter {counter}</h2>
+                <button onClick={incrementer}>Click</button>
+                <button onClick={toggler}>Toggle</button>
+            </div>
         </div>
-     </div>
-    </HashRouter>
-    )}
-);
+    );
+}
+
+export default App;

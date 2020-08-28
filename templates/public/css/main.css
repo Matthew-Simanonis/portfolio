@@ -8,3 +8,7 @@ body {
     color: white;
     min-height: 100vh;
 }
+
+.active {
+    opacity: 0;
+}
