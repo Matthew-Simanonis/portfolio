@@ -4,7 +4,7 @@ export default class Projects extends Component {
     render() {
        return (
             <section>
-                Project {this.props.var1}
+                Project 0
             </section>
        )
     }

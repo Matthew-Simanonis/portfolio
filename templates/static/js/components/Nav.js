@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { useCase } from 'react';
 
 export default class Nav extends Component {
     render() {
         return (
             <nav>
                 <h1>Logo</h1>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <ul className='nav-links'>
+                    <li className='nav-link'>Home</li>
+                    <li className='nav-link'>About</li>
+                    <li className='nav-link'>Contact</li>
                 </ul>
             </nav>
        )
