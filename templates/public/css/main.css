@@ -1,9 +1,10 @@
 :root{
-    --primary-color:rgb(255, 183, 100);
+    --primary-color:rgb(33, 33, 85);
+    --secondary-color: rgb(12, 13, 58);
     --neutral-color: rgb(59, 59, 59);
-    --secondary-color: rgb(247, 205, 171);
     --accent1-color: rgb(86, 172, 97);
-    --accent2-color: rgb(33, 33, 85);
+    --accent2-color: rgb(255, 155, 41);
+    --accent3-color: rgb(62, 178, 255);
     --background-color: rgb(96, 110, 155);
     --menu-speed:0.75s;
 }
@@ -15,7 +16,7 @@
 
 body {
     background: var(--primary-color);
-    color: white;
+    color: whitesmoke;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
@@ -25,17 +26,66 @@ body {
   }
 
 nav {
-    background: var(--background-color);
-    min-height: 9vh;
+    background: transparent;
+    min-height: 8vh;
     margin: auto;
     display: flex;
+    top: 0;
+    position: sticky;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
+.logo {
+    padding-left: 1rem;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-shadow: var(--background-color);
+}
+
+.nav-links{
+    display: none;
+    justify-content: space-around;
+}
+
+.portfolio-btn {
+    background: var(--neutral-color);
+    color: var(--accent3-color);
+    border: var(--accent1-color) 1px solid;
+    padding: .2rem .5rem;
+    font-weight: 750;
+    border-radius: 15%;
+    margin-right: 1.2rem;
+}
+
+.logo{
+    flex: 1;
+    color: whitesmoke;
+}
+
+.hamburger{
+    font-size: 1.7rem;
+    margin-right: 1rem;
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+.nav-links li{
+    list-style: none;
+}
 
 header {
 font-size: 2rem;
+}
+
+.home {
+    padding: 0 2rem;
+    min-height: 85vh;
+}
+
+.name {
+    line-height: 2rem;
 }
 
 header,
@@ -46,44 +96,37 @@ justify-content: center;
 align-items: center;
 }
 
-form input,
-form button {
-padding: 0.5rem;
-font-size: 2rem;
-border: none;
-background: white;
-}
-
 form button {
 color: var(--accent1-color);
-background: var(--accent2-color);
+background: var(--background-color);
 cursor: pointer;
 transition: all 0.3s ease;
 }
 
 form button:hover {
 background: var(--accent1-color);
-color: var(--accent2-color);
+color: var(--accent3-color);
 }
 
 .footer {
 background: var(--accent1-color);
+align-self: flex-end;
 }
 
-.todo-container {
+.projects-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
   
-.todo-list {
+.project-list {
     min-width: 30%;
     list-style: none;
 }
   
-.todo {
+.project {
     margin: 0.5rem;
-    background: white;
+    background: whitesmoke;
     font-size: 1.5rem;
     color: black;
     display: flex;
@@ -91,17 +134,17 @@ background: var(--accent1-color);
     align-items: center;
     transition: all 1s ease;
 }
-.filter-todo {
+.filter-project {
     padding: 1rem;
 }
-.todo li {
+.project li {
     flex: 1;
 }
 
 .trash-btn,
 .complete-btn {
   background: grey;
-  color: white;
+  color: whitesmoke;
   border: none;
   padding: 1rem;
   cursor: pointer;
@@ -110,7 +153,7 @@ background: var(--accent1-color);
 .complete-btn {
   background: rgb(11, 212, 162);
 }
-.todo-item {
+.project-item {
   padding: 0rem 0.5rem;
 }
 
@@ -129,6 +172,26 @@ background: var(--accent1-color);
   opacity: 0.5;
 }
 
+.btn {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: whitesmoke;
+}
+
+.btn {
+    background: var(--neutral-color);
+    border: var(--neutral-color) solid 1px;
+    color: var(--accent1-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    
+.btn:hover {
+    background: var(--accent1-color);
+    color: var(--accent3-color);
+}
+    
 /*CUSTOM SELECTOR */
 select {
     -webkit-appearance: none;
@@ -168,5 +231,13 @@ select {
 @media screen and (min-width: 52em) {
     .nav-links {
         display: flex;
+    }
+
+    form input,
+    form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
     }
 }

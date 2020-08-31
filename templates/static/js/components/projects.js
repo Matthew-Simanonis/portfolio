@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+import React from "react";
 
-export default class Projects extends Component {
-    render() {
-       return (
-            <section>
-                Project 0
-            </section>
-       )
-    }
+import Project from './Project'
+
+const Projects = ({ projects } ) => {
+    return (
+        <div className='Projects-container'>
+            {projects.map(project => (
+                <Project 
+                    Project={project}
+                />
+            ))}
+        </div>
+    )
 }
+
+export default Projects;

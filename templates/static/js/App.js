@@ -6,7 +6,7 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Form from './components/Form'
 import TodoList from './components/TodoList'
-
+import Info from './components/info';
 
 function App() {
     // States
@@ -14,6 +14,8 @@ function App() {
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState("all");
     const [filteredTodos, setFilteredTodos] = useState([]);
+    const [navOpen, setNavOpen] = useState(false);
+    const projects = (['horse-bets', 'album-anniversary'])
 
     // Use Effect
     // Change Filter on status change
@@ -37,11 +39,18 @@ function App() {
         }
     }
 
+    // Add components to div
     return (
         <div className="App">
+            <Nav 
+                navOpen={navOpen}
+                setNavOpen={setNavOpen}
+            /> 
             <div className="home">
-                <Nav />
-                <Projects />
+                <Info />
+                <Projects 
+                    projects={projects}
+                />
                 <Form
                     inputText={inputText} 
                     setInputText={setInputText} 
@@ -51,9 +60,10 @@ function App() {
                 />
                 <TodoList 
                     todos={filteredTodos}
-                    setTodos={setTodos}/>
-                <Footer />
+                    setTodos={setTodos}
+                />
             </div>
+            <Footer />
         </div>
     );
 }
