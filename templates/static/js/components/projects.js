@@ -2,15 +2,25 @@ import React from "react";
 
 import Project from './Project'
 
-const Projects = ({ projects } ) => {
+
+const Projects = ({ projects, carouselState, setCarouselState } ) => {
     return (
-        <div className='Projects-container'>
-            {projects.map(project => (
-                <Project 
-                    Project={project}
-                />
-            ))}
-        </div>
+        <section>
+            <div className='projects-container'>
+            <button className="left-arrow"><img className="arrow" src={`/public/img/left-arrow.png`}/></button>
+                <div className='Projects-carousel'>
+                    <div className='projects'>
+                        {projects.projects.map(project=> (
+                            <Project 
+                                project={project}
+                                key={project.id}
+                            />
+                        ))}
+                    </div>
+                </div>
+            <button className="right-arrow"><img className="arrow" src={`/public/img/right-arrow.png`}/></button>
+            </div>
+        </section>
     )
 }
 

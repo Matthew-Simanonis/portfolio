@@ -6,9 +6,12 @@ const Nav = ({ navOpen, setNavOpen }) => {
     }
     return (
         <nav>
-            <div className="Logo">MS</div>
-            <button onClick={navTransition} className="portfolio-btn">Portfolio</button>
-            <i src="public/img/eye.png"></i>
+            <div className="Logo">
+                <a className='ms' href="#">
+                    MS
+                </a>
+            </div>
+            <button onClick={navTransition} className="portfolio-btn">Portfolio<img className="eye" src={`/public/img/eye.png`}/></button>
             <button className="hamburger">
                 <i className="fas fa-bars"></i>
             </button>

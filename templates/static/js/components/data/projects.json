@@ -1,0 +1,24 @@
+{"projects": [
+   {
+    "title": "horse-bets",
+    "id" : "0",
+    "description": "",
+    "url" : "",
+    "image" : ""
+   },
+   {
+    "title": "album-anniversary",
+    "id": "1",
+    "description": "",
+    "url" : "",
+    "image" : ""
+   },
+   {
+    "title": "macd-alerts",
+    "id": "2",
+    "description": "",
+    "url" : "",
+    "image" : ""
+   }
+ ]
+}
