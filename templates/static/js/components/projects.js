@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Project from './Project'
 
+const scrollValue = 60;
+
 
 const Projects = ({ projects, carouselState, setCarouselState } ) => {
+    const scrollCapture = (el) => {
+        let carousel = el.target;
+        console.log(carousel.scrollLeft)
+    }
+
+    const leftArrow = (el) => {
+        let carousel = el.currentTarget.parentNode;
+        carousel.scrollLeft -= 120;
+    }
+
+    const rightArrow = (el) => {
+        let carousel = el.currentTarget.parentNode;
+        carousel.scrollLeft += 120;
+    }
+
+    
     return (
         <section>
             <div className='projects-container'>
-            <button className="left-arrow"><img className="arrow" src={`/public/img/left-arrow.png`}/></button>
-                <div className='Projects-carousel'>
+                <div className='Projects-carousel' onScroll={scrollCapture}>
+                <button className="left-arrow" onClick={leftArrow}><img className="arrow" src={`/public/img/left-arrow.png`}/></button>
                     <div className='projects'>
                         {projects.projects.map(project=> (
                             <Project 
@@ -17,8 +35,8 @@ const Projects = ({ projects, carouselState, setCarouselState } ) => {
                             />
                         ))}
                     </div>
+                <button className="right-arrow"  onClick={rightArrow}><img className="arrow" src={`/public/img/right-arrow.png`}/></button>
                 </div>
-            <button className="right-arrow"><img className="arrow" src={`/public/img/right-arrow.png`}/></button>
             </div>
         </section>
     )
