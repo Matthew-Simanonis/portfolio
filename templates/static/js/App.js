@@ -5,7 +5,8 @@ import Nav from './components/Nav'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Form from './components/Form'
-import Info from './components/info';
+import Info from './components/info'
+import Skills from './components/Skills'
 
 function App() {
     // States
@@ -39,6 +40,7 @@ function App() {
                     inputText={inputText} 
                     setInputText={setInputText} 
                 />
+                <Skills />
             </div>
             <Footer />
         </div>
