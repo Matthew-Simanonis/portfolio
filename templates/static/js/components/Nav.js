@@ -3,7 +3,6 @@ import React from 'react';
 const Nav = ({ navOpen, setNavOpen }) => {
     const openNav = () => {
         setNavOpen(!navOpen)
-        console.log(navOpen)
     }
 
     const openPortfolio = () => {
@@ -18,14 +17,18 @@ const Nav = ({ navOpen, setNavOpen }) => {
                 </a>
             </div>
             <button onClick={openPortfolio} className="portfolio-btn">Portfolio<img className="eye" src={`/public/img/eye.png`}/></button>
-            <button onClick={openNav} className="hamburger">
-                <i className="fas fa-bars"></i>
+            <button onClick={openNav} className={`hamburger${navOpen ? " selected" : ""}`}>
+                <i className={`${navOpen ? "fas fa-times" : "fas fa-bars"}`}></i>
             </button>
-            <ul className={`nav-links${navOpen ? " show" : ""}`}>
-                <li className='nav-link'>Home</li>
-                <li className='nav-link'>About</li>
-                <li className='nav-link'>Contact</li>
-            </ul>
+            <div className={`links${navOpen ? " show" : ""}`}>
+                <ul className={`nav-links`}>
+                    <li className='nav-link'><a href="#">Home</a></li>
+                    <li className='nav-link'><a href="#">About</a></li>
+                    <li className='nav-link'><a href="#">Contact</a></li>
+                    <li className='nav-link'><a href="#">Resume</a></li>
+                </ul>
+            </div>
+        <div className={`${navOpen ? "darken" : ""}`}></div>
         </nav>
     )
 };

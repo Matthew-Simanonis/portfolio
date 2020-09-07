@@ -1,24 +1,27 @@
 {"projects": [
    {
-    "title": "horse-bets",
+    "title": "Horse-Bets",
     "id" : "0",
-    "description": "",
+    "description": "A decent App. Many many flaws",
     "url" : "",
-    "image" : ""
+    "image" : "",
+    "picture": "horse-bets"
    },
    {
-    "title": "album-anniversary",
+    "title": "Album-Anniversary",
     "id": "1",
-    "description": "",
+    "description": "A pretty good app. Not too Many Flaws",
     "url" : "",
-    "image" : ""
+    "image" : "",
+    "picture": "album-anniversary"
    },
    {
-    "title": "macd-alerts",
+    "title": "MACD-Alerts",
     "id": "2",
-    "description": "",
+    "description": "This app is bad. pretty much broken",
     "url" : "",
-    "image" : ""
+    "image" : "",
+    "picture": "ethchart"
    }
  ]
 }

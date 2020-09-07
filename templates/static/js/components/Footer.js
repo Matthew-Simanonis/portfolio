@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 const Footer = () => {
     return(
         <div className='footer'>
-            <h1>BUNCHA BS</h1>
+            <h2>Matthew Simanonis</h2>
+            <h2>2020</h2>
+            <h3>msimanonis@gmail.com</h3>
         </div>
     )
 }

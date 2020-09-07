@@ -7,24 +7,24 @@ import Footer from './components/Footer'
 import Form from './components/Form'
 import Info from './components/info'
 import Skills from './components/Skills'
+import About from './components/About'
 
 function App() {
     // States
-    const [inputText, setInputText] = useState('');
-    const [carouselState, setCarouselState] = useState(0);
+    const [inputText, setInputText] = useState('')
     const [navOpen, setNavOpen] = useState(false);
+    const [selected, setSelected] = useState('0');
     const projects = require('./components/data/projects.json');
 
 
     // Use Effect
 
     // Functions
-    const CarouselHandler = () => {
-        setCarouselState(carouselState += 1)
-    }
+
     // Add components to div
     return (
         <div className="App">
+            <div className="background"></div>
             <Nav 
                 navOpen={navOpen}
                 setNavOpen={setNavOpen}
@@ -33,14 +33,15 @@ function App() {
                 <Info />
                 <Projects 
                     projects={projects}
-                    carouselState = {carouselState}
-                    setCarouselState = {setCarouselState}
+                    selected={selected}
+                    setSelected={setSelected}
                 />
                 <Form
                     inputText={inputText} 
                     setInputText={setInputText} 
                 />
                 <Skills />
+                <About />
             </div>
             <Footer />
         </div>

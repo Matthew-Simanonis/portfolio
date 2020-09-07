@@ -1,14 +1,14 @@
 :root{
     --primary-color:rgb(33, 33, 85);
     --secondary-color: rgb(12, 13, 58);
-    --neutral-color: linear-gradient(rgb(44, 44, 44), rgb(59, 59, 59));
+    --neutral-color: linear-gradient(rgb(48, 48, 48), rgb(59, 59, 59));
     --accent1-color: rgb(80, 177, 169);
-    --accent2-color: rgb(255, 155, 41);
+    --accent2-color: rgb(243, 143, 28);
     --accent3-color: rgb(30, 199, 162);
     --background-color: rgb(15, 37, 37);
     --background2-color: rgb(15, 87, 87);
-    --button1-color: rgb(142, 226, 198);
-    --button2-color: rgb(193, 253, 233);
+    --button1-color: rgb(142, 226, 198, .6);
+    --button2-color: rgb(193, 253, 233, .6);
     --menu-speed:0.75s;
 }
 * {
@@ -21,23 +21,36 @@ body {
     color: whitesmoke;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+    background: transparent;
 }
 
-.app {
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
     background: linear-gradient(61deg, var(--background2-color), var(--background-color));
-  }
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    padding: 1rem 0;
+}
 
 nav {
-    background: transparent;
+    background: linear-gradient(61deg, rgb(15, 63, 63, .93), var(--background-color));
     min-height: 8vh;
+    z-index: 20;
     margin: auto;
+    box-shadow: 1px 1px 2px 2px rgba(0, 255, 213, 0.151);
     display: flex;
     top: 0;
     position: sticky;
-    padding-top: 2vh;
+    padding: 1vh 0;
+    overflow:hidden;
     align-items: center;
     justify-content: space-around;
-    transition: all 0.5s ease;
 }
 
 .logo {
@@ -49,18 +62,30 @@ nav {
 
 .ms {
     display: inline;
-    background: var(--accent1-color);
+    background: linear-gradient(var(--accent2-color), rgb(240, 202, 33));
     border-radius: 100%;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: .3rem;
     color: whitesmoke;
     text-decoration: none;
 }
 
+.links{
+    position: fixed;
+    padding: 1rem;
+    z-index: 30;
+    background: rgb(63, 63, 63, .9);
+    top: 9vh;
+    font-size: 2rem;
+    line-height: 4rem;
+    right: -12rem;
+    transition: all 0.2s ease;
+}
+
 .nav-links{
-    display: none;
     justify-content: space-around;
 }
+
 
 .portfolio-btn {
     background: linear-gradient(50deg, var(--accent3-color), rgb(83, 236, 191));
@@ -95,6 +120,7 @@ nav {
 .hamburger{
     font-size: 1.7rem;
     margin-right: 1rem;
+    min-width: 24px;
     background: transparent;
     color: whitesmoke;
     border: none;
@@ -105,13 +131,17 @@ nav {
     list-style: none;
 }
 
+.nav-links a{
+    color: white;
+    text-decoration: none;
+}
+
 header {
 font-size: 2rem;
 }
 
 .home {
-    padding: 2rem 2rem;
-    min-height: 85vh;
+    padding: 1rem 1rem;
 }
 
 .name {
@@ -124,75 +154,52 @@ font-size: 2rem;
 
 header,
 form {
-min-height: 20vh;
-display: flex;
-justify-content: center;
-align-items: center;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form button {
-color: var(--accent1-color);
-background: var(--background-color);
-cursor: pointer;
-transition: all 0.3s ease;
+    color: var(--accent1-color);
+    background: var(--background-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 form button:hover {
-background: var(--accent1-color);
-color: var(--accent3-color);
+    background: var(--accent1-color);
+    color: var(--accent3-color);
 }
 
 .footer {
-background: var(--accent1-color);
-align-self: flex-end;
-}
-
-
-.fall {
-  transform: translateY(10rem) rotateZ(20deg);
-  opacity: 0;
+    background: var(--accent1-color);
+    align-self: flex-end;
+    text-align: center;
 }
 
 .btn {
     padding: 0.5rem;
     font-size: 1.5rem;
     outline: none;
-    background: var(--neutral-color);
+    margin: .5rem;
+    border-radius: 10%;
     border: none;
-    color: var(--accent1-color);
+    background: var(--accent1-color);
+    color: black;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 1px 1px rgba(0, 255, 213, 0.329);
 }
     
 .btn:hover {
-    background: var(--accent1-color);
-    color: var(--accent3-color);
+    background: var(--neutral-color);
+    color: var(--accent1-color);
 }
-/* Project Carousel */
 
+/* Project Carousel */
 .projects-container {
     display: flex; 
-}
-
-.right-arrow {
-    position: absolute;
-    right: 3%;
-}
-
-.left-arrow {
-    position: absolute;
-    left: 3%;
-}
-
-.arrow {
-    border-radius: 50%;
-    border: none;
-    top: 50%;
-    outline: none;
-    background: rgba(128, 128, 128, 0.575);
-    padding: .3rem .5rem;
-    cursor: pointer;
-    font-size: 40px
 }
 
 .projects-carousel {
@@ -200,26 +207,25 @@ align-self: flex-end;
     overflow-x:scroll;
     display: flex;
     width: 90%;
-    height: 300px;
     border-radius: 10%;
-    background: var(--neutral-color);
-    padding: .3rem;
 }
 
 .projects {
-    width: 100%;
     display: flex;
 }
 
 .project {
-    margin: 0.5rem;
+    margin: 0 0.5rem;
     background: whitesmoke;
     color: black;
     display: flex;
+    position: relative;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: all 1s ease;
     min-width: 200px;
+    overflow: hidden;
+    min-height: 260px;
     border-radius: 10%;
 }
 
@@ -230,21 +236,110 @@ align-self: flex-end;
 }
 
 .project-item {
-  padding: 0rem 0.5rem;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transition: all .3s ease;
 }
 
-.show {
-    display: block;
-    flex-direction: column;
+
+.project-item img{
+    width: 110%;
+    height: 285px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
 }
+
+.project-dropdown {
+    background:rgb(97, 82, 82, .94);
+    padding: 2rem;
+    position: relative;
+    height: 100%;
+    top: -18rem;
+    transition: all .3s ease;
+    border-top-right-radius: 10%;
+    z-index: 2;
+    border-top-left-radius: 10%;
+}
+
+.dropdown-content{
+    top: -18rem;
+    position: absolute;
+}
+
+/* Arrows */
+.arrow {
+    border-radius: 50%;
+    border: none;
+    top: 55%;
+    color: rgb(10, 10, 10, .6);   
+    outline: none;
+    background: rgba(128, 128, 128, 0.575);
+    padding: .3rem .5rem;
+    cursor: pointer;
+    font-size: 40px
+}
+
+.right-arrow {
+    position: absolute;
+    right: 2%;
+    padding-left: .6rem;
+    padding-right: .4rem;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 2%;
+    padding-left: .4rem;
+    padding-right: .6rem;
+}
+
 
 .skill {
     margin: 1rem;
     background: linear-gradient(20deg, var(--button1-color), var(--button2-color), var(--button1-color));
-    color: black;
+    color: white;
     transition: all 1s ease;
     border-radius: 10%;
     padding: 1rem;
+}
+
+.skill h1{
+    text-align: center;
+    font-weight: 700;
+}
+
+.skill ul{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
+/* Effects */
+.show {
+    display: block;
+    right: 0;
+}
+
+.show-dropdown {
+    top: 0;
+}
+
+.selected {
+    font-size: 210%;
+}
+
+.darken {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: rgba(10,10,10,.6);
 }
 
 @media screen and (min-width: 52em) {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Project from './Project'
 
-const Projects = ({ projects, carouselState, setCarouselState } ) => {
+const Projects = ({ projects, selected, setSelected } ) => {
     const scrollCapture = (el) => {
         let carousel = el.target;
         console.log(carousel.scrollLeft)
@@ -23,16 +23,18 @@ const Projects = ({ projects, carouselState, setCarouselState } ) => {
         <section>
             <div className='projects-container'>
                 <div className='Projects-carousel' onScroll={scrollCapture}>
-                <button className="left-arrow arrow" onClick={leftArrow}><i className="fas fa-angle-left"></i></button>
+                <button className="arrow left-arrow" onClick={leftArrow}><i className="fas fa-angle-left"></i></button>
                     <div className='projects'>
                         {projects.projects.map(project=> (
                             <Project 
                                 project={project}
                                 key={project.id}
+                                selected={selected}
+                                setSelected={setSelected}
                             />
                         ))}
                     </div>
-                <button className="right-arrow arrow"  onClick={rightArrow}><i className="fas fa-angle-right"></i></button>
+                <button className="arrow right-arrow"  onClick={rightArrow}><i className="fas fa-angle-right"></i></button>
                 </div>
             </div>
         </section>
