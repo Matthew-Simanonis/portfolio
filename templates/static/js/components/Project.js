@@ -6,23 +6,25 @@ const Project = ({ project, selected, setSelected }) => {
 
     const select = () => {
         setSelected(selected = project.id)
-        setDropDown(!dropDown)
+        setDropDown(true)
     }
 
     const deselect = () => {
         setSelected(selected = '-1')
-        setDropDown(!dropDown)
+        setDropDown(false)
     }
 
     return (
         <div className={`project`} id={project.title} onMouseOver={select} onMouseOut={deselect}>
-            <div className={`project-dropdown ${dropDown ? "show-dropdown" : ""}`}>
+            <div className={`project-title`}>
+                {project.title}
+            </div>
+            <div className={`project-dropdown ${dropDown ? "show-dropdown" : ""}`}  onClick={deselect}>
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
+                <a href={project.code} target="_blank">Code</a>
             </div>
-
             <div className={`project-item ${project.title}`}>
-                {project.title}
                 <img className="project-image" src={`/public/img/${project.picture}.png`}></img>
             </div>
         </div>

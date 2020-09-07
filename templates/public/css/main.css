@@ -43,7 +43,7 @@ nav {
     min-height: 8vh;
     z-index: 20;
     margin: auto;
-    box-shadow: 1px 1px 2px 2px rgba(0, 255, 213, 0.151);
+    box-shadow: 0px 2px 2px rgba(0, 255, 213, 0.151);
     display: flex;
     top: 0;
     position: sticky;
@@ -63,9 +63,9 @@ nav {
 .ms {
     display: inline;
     background: linear-gradient(var(--accent2-color), rgb(240, 202, 33));
-    border-radius: 100%;
+    border-radius: 30%;
     font-size: 1.6rem;
-    padding: .3rem;
+    padding: .1rem .2rem;
     color: whitesmoke;
     text-decoration: none;
 }
@@ -152,8 +152,7 @@ font-size: 2rem;
     padding: 2rem 0;
 }
 
-header,
-form {
+header {
     min-height: 20vh;
     display: flex;
     justify-content: center;
@@ -200,33 +199,36 @@ form button:hover {
 /* Project Carousel */
 .projects-container {
     display: flex; 
+    position: relative;
 }
 
 .projects-carousel {
-    margin: auto;
+    margin: 0 1rem;
     overflow-x:scroll;
+    height: 300px;
     display: flex;
-    width: 90%;
-    border-radius: 10%;
+    border-radius: 5%;
 }
 
 .projects {
     display: flex;
+    height: 97%;
 }
 
 .project {
-    margin: 0 0.5rem;
-    background: whitesmoke;
+    min-height: 270px;
+    margin: 0 0.8rem;
     color: black;
     display: flex;
+    border: 1px solid rgb(196, 196, 196);
     position: relative;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-width: 200px;
+    width: 200px;
     overflow: hidden;
-    min-height: 260px;
     border-radius: 10%;
+    box-shadow: 3px 2px 5px rgb(0, 0, 0, .7);
 }
 
 .project li {
@@ -242,18 +244,29 @@ form button:hover {
     transition: all .3s ease;
 }
 
-
 .project-item img{
-    width: 110%;
-    height: 285px;
+    width: 100%;
+    height: 290px;
     position: absolute;
     top: -10px;
-    left: -10px;
+    opacity: .85;
+}
+
+.project-title {
+    padding: .4rem;
+    color: white;
+    background: rgb(29, 29, 29);
+    font-weight: 800;
+    border-radius: 20%;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
 }
 
 .project-dropdown {
     background:rgb(97, 82, 82, .94);
     padding: 2rem;
+    color: white;
     position: relative;
     height: 100%;
     top: -18rem;
@@ -272,25 +285,30 @@ form button:hover {
 .arrow {
     border-radius: 50%;
     border: none;
-    top: 55%;
+    top: 35%;
     color: rgb(10, 10, 10, .6);   
     outline: none;
-    background: rgba(128, 128, 128, 0.575);
+    background: rgba(128, 128, 128, 0.4);
     padding: .3rem .5rem;
     cursor: pointer;
-    font-size: 40px
+    font-size: 40px;
+    z-index: 2;
+}
+
+.arrow:hover {
+    background: rgba(110, 110, 110, 0.8)
 }
 
 .right-arrow {
     position: absolute;
-    right: 2%;
+    right: -2%;
     padding-left: .6rem;
     padding-right: .4rem;
 }
 
 .left-arrow {
     position: absolute;
-    left: 2%;
+    left: -2%;
     padding-left: .4rem;
     padding-right: .6rem;
 }
@@ -313,6 +331,7 @@ form button:hover {
 .skill ul{
     list-style: none;
     display:flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -341,6 +360,18 @@ form button:hover {
     z-index: -1;
     background: rgba(10,10,10,.6);
 }
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+    margin: .2rem 0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
 
 @media screen and (min-width: 52em) {
     .nav-links {

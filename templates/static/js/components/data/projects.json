@@ -4,24 +4,36 @@
     "id" : "0",
     "description": "A decent App. Many many flaws",
     "url" : "",
-    "image" : "",
-    "picture": "horse-bets"
+    "picture": "horse-bets",
+    "challenges" : "",
+    "code" : "https://github.com/Matthew-Simanonis/horse-bets"
    },
    {
     "title": "Album-Anniversary",
     "id": "1",
     "description": "A pretty good app. Not too Many Flaws",
     "url" : "",
-    "image" : "",
-    "picture": "album-anniversary"
+    "picture": "album-anniversary",
+    "challenges" : "",
+    "code" : "https://github.com/Matthew-Simanonis/AlbumAnniversaryApp"
    },
    {
     "title": "MACD-Alerts",
     "id": "2",
     "description": "This app is bad. pretty much broken",
     "url" : "",
-    "image" : "",
-    "picture": "ethchart"
+    "picture": "ethchart",
+    "challenges" : "",
+    "code" : "https://github.com/Matthew-Simanonis/MacdSignal"
+   },
+   {
+    "title": "Portfolio",
+    "id": "3",
+    "description": "This app is bad. pretty much broken",
+    "url" : "",
+    "picture": "ethchart",
+    "challenges" : "",
+    "code" : "https://github.com/Matthew-Simanonis/portfolio"
    }
  ]
 }

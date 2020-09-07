@@ -25,19 +25,8 @@ function App() {
                 navOpen={navOpen}
                 setNavOpen={setNavOpen}
             />
-            <div className="home">
+            <div className="projects-home">
                 <Info />
-                <Projects 
-                    projects={projects}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <Skills />
-                <About />
-                <Form
-                    inputText={inputText} 
-                    setInputText={setInputText} 
-                />
             </div>
             <Footer />
         </div>

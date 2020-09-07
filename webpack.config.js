@@ -1,10 +1,14 @@
 const webpack = require('webpack');
 const config = {
 devtool: 'eval-source-map',
-entry: __dirname + '/templates/static/js/index.jsx',
-output:{
+entry: {
+       home: __dirname + '/templates/static/js/index.jsx',
+       projects: __dirname + '/templates/static/js/projects.jsx',
+       vendors: ['react']
+     },
+output: {
        path: __dirname + '/templates/public/js',
-       filename: 'bundle.js',
+       filename: '[name].bundle.js',
 },
 resolve: {
        extensions: ['.js','.jsx','.css']
