@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Project from './Project'
+import Project from './ProjectComponent'
 
 const Projects = ({ projects, selected, setSelected } ) => {
     const scrollCapture = (el) => {
@@ -19,7 +19,7 @@ const Projects = ({ projects, selected, setSelected } ) => {
 
     
     return (
-        <section>
+        <section id="project-section">
             <h1>Projects</h1>
             <div className='projects-container'>
                 <button className="arrow left-arrow" onClick={leftArrow}><i className="fas fa-angle-left"></i></button>

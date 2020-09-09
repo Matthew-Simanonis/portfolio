@@ -11,6 +11,7 @@
     --button2-color: rgb(193, 253, 233, .6);
     --menu-speed:0.75s;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +31,11 @@ p {
     color: rgb(228, 228, 228)
 }
 
+section {
+    padding: 1rem 0;
+}
+
+/* Background */
 .background {
     position: fixed;
     top: 0;
@@ -40,10 +46,33 @@ p {
     width: 100vw;
 }
 
-section {
-    padding: 1rem 0;
+.background img{
+    position: absolute;
 }
 
+.dna {
+    top: 13%;
+    left: -50%;
+    height: 82%;
+    transform: rotate(88deg);
+    opacity: .3;
+}
+
+.molecules{
+    opacity: .10;
+    height: 40%;
+    transform: scaleX(-1);
+    left: -70%;
+    top: -15%;
+}
+
+.molecules2{
+    opacity: .2;
+    height: 40%;
+    transform: rotate(190deg);
+    top: 75%;
+    left: 60%;
+}
 
 /* NavBar */
 nav {
@@ -149,6 +178,7 @@ font-size: 2rem;
 /* Main */
 .home {
     padding: 1rem 1rem;
+    flex: 1;
 }
 
 .name {
@@ -252,10 +282,10 @@ form button:hover {
 
 .project-item img{
     width: 100%;
-    height: 290px;
+    height: 105%;
     position: absolute;
     top: -10px;
-    opacity: .85;
+    opacity: .9;
 }
 
 .project-title {
@@ -345,6 +375,7 @@ form button:hover {
     transition: all 1s ease;
     border-radius: 10%;
     padding: 1rem;
+    position: relative;
 }
 
 .skill h1{
@@ -357,6 +388,158 @@ form button:hover {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.skill-images {
+    position: relative;
+}
+
+.skill-images-container{
+    position: absolute;
+    display: flex;
+    left: 65%;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.skill-images img {
+    width: 50%;
+    padding: 5%;
+}
+
+#js-logo {
+    left: 60%;
+    top: 5%;
+}
+
+#html-logo {
+    left: 60%;
+    top: 0%;
+}
+
+#react-logo {
+    left: 75%;
+    top: 5%;
+}
+
+#css-logo {
+    left: 65%;
+    top: 0%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+    margin: .2rem 0;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+@media screen and (min-width: 52em) {
+    /* Main */
+    .app {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    body{
+        font-size: 2rem;
+    }
+    
+    .home {
+        max-width: 1600px;
+        align-self: center;
+    }
+
+    /* Background */
+    .dna {
+        top: 13%;
+        height: 110%;
+        left: 30%;
+    }
+
+    .molecules2{
+        top: 0;
+        left: 0;
+    }
+    
+    header h1{
+        font-size: 4rem;
+    }
+    
+    /* NavBar */
+    .ms {
+        font-size: 3rem;
+    }
+    
+    .links{
+        position: relative;
+        right: 0;
+        top: 0;
+        background: none;
+        flex: 1;
+    }
+
+    .portfolio-btn {
+        display: none;
+    }
+
+    .nav-links li {
+        padding: 0 2rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        min-height: 30px;
+    }
+
+    form input,
+    form button {
+        padding: 0.5rem;
+        font-size: 2rem;
+        border: none;
+        background: whitesmoke;
+    }
+
+    /* Projects  */
+    .projects-carousel {
+        justify-content: center;
+    }
+
+    .projects {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 80%;
+        align-self: center;
+    }
+
+    .project {
+        width: 300px;
+        border: none;
+        height: 450px;
+        margin: 1rem;
+    }
+
+    .project-dropdown {
+        top: -45rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .skills-container {
+        display: flex;
+    }
 }
 
 /* Effects */
@@ -381,64 +564,4 @@ form button:hover {
     top: 0;
     z-index: -1;
     background: rgba(10,10,10,.6);
-}
-
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 0px;
-    margin: .2rem 0;
-}
-  
-::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, .5);
-    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
-
-@media screen and (min-width: 52em) {
-    .app {
-        display: flex;
-        flex-direction: column;
-    }
-    body{
-        font-size: 2rem;
-    }
-
-    .home {
-        max-width: 1600px;
-        align-self: center;
-    }
-    
-    header h1{
-        font-size: 4rem;
-    }
-    
-    .links{
-        position: relative;
-        right: 0;
-        top: 0;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-        min-height: 30px;
-    }
-
-    form input,
-    form button {
-        padding: 0.5rem;
-        font-size: 2rem;
-        border: none;
-        background: whitesmoke;
-    }
-
-    .project {
-        width: 400px;
-    }
 }

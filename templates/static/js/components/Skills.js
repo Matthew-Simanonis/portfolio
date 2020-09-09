@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 
+import SkillImages from './SkillImages'
+
 const Skills = () => {
     
     return (
         <section>
             <div className='Skills-container'>
                 <div className='skill'>
+                    <SkillImages 
+                        languages = {['html', 'css', 'js', 'react']}
+                    />
                     <h2>Front-End</h2>
                     <ul>
                         <li>HTML/CSS</li>
@@ -16,6 +21,9 @@ const Skills = () => {
                     <a>Examples</a>
                 </div>
                 <div className='skill'>
+                    <SkillImages 
+                        languages = {[]}
+                    />
                     <h2>Back-End</h2>
                     <ul>
                         <li>Flask</li>
@@ -26,6 +34,9 @@ const Skills = () => {
                     <a>Examples</a>
                 </div>
                 <div className='skill'>
+                    <SkillImages 
+                        languages = {['python']}
+                    />
                     <h2>Data-Analytics</h2>
                     <ul>
                         <li>Python</li>
