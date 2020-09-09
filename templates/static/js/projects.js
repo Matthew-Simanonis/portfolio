@@ -8,11 +8,9 @@ import Form from './components/Form'
 import Info from './components/info'
 import Skills from './components/Skills'
 import About from './components/About'
-import Home from './components/Home'
 
 function App() {
     // States
-    const [inputText, setInputText] = useState('')
     const [navOpen, setNavOpen] = useState(false);
     const [selected, setSelected] = useState('0');
     const projects = require('./components/data/projects.json');

@@ -2,16 +2,18 @@
    {
     "title": "Horse-Bets",
     "id" : "0",
-    "description": "A decent App. Many many flaws",
-    "url" : "",
+    "summary" : "A single page Web App, used for getting racing horse odds.",
+    "description": "",
+    "url" : "http://horsebets-env.eba-4r8mqs2p.us-east-2.elasticbeanstalk.com/",
     "picture": "horse-bets",
     "challenges" : "",
     "code" : "https://github.com/Matthew-Simanonis/horse-bets"
    },
    {
-    "title": "Album-Anniversary",
+    "title": "Album Anniversary",
     "id": "1",
-    "description": "A pretty good app. Not too Many Flaws",
+    "summary" : "An email reminder system for Album Birthdays",
+    "description": "",
     "url" : "",
     "picture": "album-anniversary",
     "challenges" : "",
@@ -20,6 +22,7 @@
    {
     "title": "MACD-Alerts",
     "id": "2",
+    "summary" : "A stock watching app that notifies of STOCH/MACD crossover in a set of selected stocks",
     "description": "This app is bad. pretty much broken",
     "url" : "",
     "picture": "ethchart",
@@ -29,6 +32,7 @@
    {
     "title": "Portfolio",
     "id": "3",
+    "summary" : "My own website. You are looking at it. I coded everything",
     "description": "This app is bad. pretty much broken",
     "url" : "",
     "picture": "ethchart",

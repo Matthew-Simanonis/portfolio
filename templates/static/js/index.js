@@ -8,7 +8,6 @@ import Form from './components/Form'
 import Info from './components/info'
 import Skills from './components/Skills'
 import About from './components/About'
-import Home from './components/Home'
 
 function App() {
     // States
