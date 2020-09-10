@@ -20,8 +20,8 @@ const Projects = ({ projects, selected, setSelected } ) => {
     
     return (
         <section id="project-section">
-            <h1>Projects</h1>
             <div className='projects-container'>
+                <h1>Projects</h1>
                 <button className="arrow left-arrow" onClick={leftArrow}><i className="fas fa-angle-left"></i></button>
                 <div className='Projects-carousel' id="carousel" onScroll={scrollCapture}>
                     <div className='projects'>

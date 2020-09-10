@@ -24,7 +24,6 @@ body {
     min-height: 100vh;
     background: transparent;
     font-size: 1.2rem;
-    overflow-x: hidden;
 }
 
 p {
@@ -182,11 +181,14 @@ font-size: 2rem;
 }
 
 .name {
-    line-height: 2rem;
+    line-height: 3.3rem;
+    font-size: 3rem;
+    padding-top: 2rem;
 }
 
 .headline {
-    padding: 2rem 0;
+    padding-top: 2rem;
+    color: rgb(221, 221, 221);
 }
 
 header {
@@ -237,22 +239,28 @@ form button:hover {
 .projects-container {
     display: flex; 
     position: relative;
+    flex-direction: column;
+}
+
+.projects-container h1 {
+    text-align: center;
 }
 
 .projects-carousel {
     margin: 0 1rem;
-    overflow-x:scroll;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     display: flex;
     border-radius: 5%;
 }
 
 .projects {
     display: flex;
-    height: 97%;
+    padding: .7rem 0;
 }
 
 .project {
-    min-height: 270px;
+    height: 270px;
     margin: 0 0.8rem;
     color: black;
     display: flex;
@@ -263,6 +271,7 @@ form button:hover {
     align-items: center;
     width: 200px;
     overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
     border-radius: 10%;
     box-shadow: 3px 2px 5px rgb(0, 0, 0, .7);
 }
@@ -305,6 +314,7 @@ form button:hover {
     background:rgb(97, 82, 82, .96);
     padding: 1rem;
     color: white;
+    -webkit-transform: translate3d(0,0,0);
     position: relative;
     height: 100%;
     top: -18rem;
@@ -312,6 +322,7 @@ form button:hover {
     z-index: 2;
     display: flex;
     flex-direction: column;
+    border-radius: 10%;
 }
 
 .project-dropdown h2{
@@ -372,7 +383,6 @@ form button:hover {
     margin: 1rem;
     background: linear-gradient(20deg, var(--button1-color), var(--button2-color), var(--button1-color));
     color: white;
-    transition: all 1s ease;
     border-radius: 10%;
     padding: 1rem;
     position: relative;
@@ -397,13 +407,15 @@ form button:hover {
 .skill-images-container{
     position: absolute;
     display: flex;
-    left: 65%;
+    left: 60%;
     flex-wrap: wrap;
     width: 30%;
+    justify-content: center;
 }
 
 .skill-images img {
-    width: 50%;
+    width: 2rem;
+    height: 3rem;
     padding: 5%;
 }
 
@@ -420,11 +432,21 @@ form button:hover {
 #react-logo {
     left: 75%;
     top: 5%;
+    align-self: center;
+    height: 2rem;
 }
 
 #css-logo {
     left: 65%;
     top: 0%;
+}
+
+#python-logo {
+    top: 40%;
+    position: absolute;
+    left: 51%;
+    margin-left: 1rem;
+    width: 3rem;
 }
 
 /* Scrollbar */
