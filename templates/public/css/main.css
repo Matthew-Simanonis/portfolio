@@ -1,5 +1,5 @@
 :root{
-    --primary-color:rgb(33, 33, 85);
+    --primary-color:rgb(155, 233, 213);
     --secondary-color: rgb(12, 13, 58);
     --neutral-color: linear-gradient(rgb(48, 48, 48), rgb(59, 59, 59));
     --accent1-color: rgb(80, 177, 169);
@@ -76,14 +76,13 @@ section {
 /* NavBar */
 nav {
     background: linear-gradient(61deg, rgb(15, 63, 63, .93), var(--background-color));
-    min-height: 8vh;
-    z-index: 20;
+    height: 75px;
+    z-index: 15;
     box-shadow: 0px 2px 2px rgba(0, 255, 213, 0.151);
     display: flex;
     top: 0;
     position: sticky;
     padding: 1vh 0;
-    overflow:hidden;
     align-items: center;
     justify-content: space-around;
 }
@@ -93,6 +92,8 @@ nav {
     font-size: 2rem;
     color: var(--secondary-color);
     text-shadow: var(--background-color);
+    flex: 1;
+    color: whitesmoke;
 }
 
 .ms {
@@ -105,15 +106,16 @@ nav {
     text-decoration: none;
 }
 
+/* Links */
 .links{
     position: fixed;
     padding: 1rem;
-    z-index: 30;
+    z-index: 5;
     background: rgb(63, 63, 63, .9);
     top: 9vh;
-    font-size: 2rem;
-    line-height: 4rem;
-    right: -12rem;
+    font-size: 3rem;
+    line-height: 5rem;
+    right: -16rem;
     transition: all 0.2s ease;
 }
 
@@ -121,13 +123,13 @@ nav {
     justify-content: space-around;
 }
 
+/* Portfolio Button */
 .portfolio-btn {
     background: linear-gradient(50deg, var(--accent3-color), rgb(83, 236, 191));
     color: var(--neutral-color);
     border: none;
-    padding: .2rem .5rem;
+    padding: .3rem .6rem;
     font-weight: 750;
-    font-size: .9rem;
     align-items: center;
     border-radius: 10%;
     display: flex;
@@ -146,13 +148,10 @@ nav {
     margin-left: .7rem;
 }
 
-.logo{
-    flex: 1;
-    color: whitesmoke;
-}
-
+/* Hamburger Menu */
 .hamburger{
-    font-size: 1.7rem;
+    font-size: 2.8rem;
+    padding: .3rem;
     margin-right: 1rem;
     min-width: 24px;
     background: transparent;
@@ -170,44 +169,41 @@ nav {
     text-decoration: none;
 }
 
-header {
-font-size: 2rem;
-}
-
 /* Main */
 .home {
     padding: 1rem 1rem;
     flex: 1;
 }
 
+/* Info */
 .name {
     line-height: 3.3rem;
     font-size: 3rem;
     padding-top: 2rem;
+    color: white;
 }
 
 .headline {
-    padding-top: 2rem;
-    color: rgb(221, 221, 221);
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    align-self: flex-end;
+    color: rgb(14, 196, 180);
 }
 
-header {
-    min-height: 20vh;
+.about-me {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem 0;
 }
 
-form button {
-    color: var(--accent1-color);
-    background: var(--background-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-form button:hover {
-    background: var(--accent1-color);
-    color: var(--accent3-color);
+.about-me button {
+    padding: .5rem .8rem;
+    font-size: 1.6rem;
+    border:none;
+    margin-left: 5%;
+    box-shadow: -2px 2px 2px rgba(79, 116, 106, 0.4);
+    border-radius: 10%;
+    color: rgb(240, 240, 240);
+    background: var(--accent1-color)
 }
 
 .footer {
@@ -216,6 +212,7 @@ form button:hover {
     text-align: center;
 }
 
+/* Buttons */
 .btn {
     padding: 0.5rem;
     font-size: 1.5rem;
@@ -243,7 +240,10 @@ form button:hover {
 }
 
 .projects-container h1 {
+    margin: auto;
+    padding: .2rem 1rem;
     text-align: center;
+    color: var(--primary-color);
 }
 
 .projects-carousel {
@@ -307,7 +307,6 @@ form button:hover {
     top: 20%;
     z-index: 1;
 }
-
 
 /* Project Dropdown */
 .project-dropdown {
@@ -474,7 +473,7 @@ form button:hover {
     }
     
     .home {
-        max-width: 1600px;
+        max-width: 1400px;
         align-self: center;
     }
 
@@ -501,6 +500,8 @@ form button:hover {
     
     .links{
         position: relative;
+        -webkit-transform: translate3d(0,0,0);
+        z-index: 21;
         right: 0;
         top: 0;
         background: none;
@@ -575,7 +576,7 @@ form button:hover {
 }
 
 .selected {
-    font-size: 210%;
+    font-size: 250%;
 }
 
 .darken {
@@ -584,6 +585,6 @@ form button:hover {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: -1;
+    z-index: -2;
     background: rgba(10,10,10,.6);
 }

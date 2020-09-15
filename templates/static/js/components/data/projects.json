@@ -3,7 +3,7 @@
     "title": "Horse-Bets",
     "id" : "0",
     "summary" : "A single page Web App, used for getting racing horse odds.",
-    "description": "",
+    "description": "A simple betting application made for my father. The user selects the horses recent placements and the app calculates scores",
     "url" : "http://horsebets-env.eba-4r8mqs2p.us-east-2.elasticbeanstalk.com/",
     "picture": "horse-bets",
     "challenges" : "",

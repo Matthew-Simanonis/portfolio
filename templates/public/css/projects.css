@@ -1,0 +1,18 @@
+.project-full {
+    padding: 1rem;
+    margin: 2rem 1rem;
+    background: rgb(50, 165, 136);
+}
+
+.project-full-item {
+    display: flex;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-full-image {
+    width: 30%;
+    height: 200px;
+}

@@ -6,8 +6,9 @@ const Info = () => {
             <div className='info-container'>
                 <h1 className="name">Matthew Simanonis</h1>
                 <h2 className="headline">Designed to Help</h2>
-                <button className='projects-btn btn'>View all work</button>
-                <button className='about-me-btn btn'>About Me</button>
+                <form action=''  className="about-me">
+                    <button>About Me</button>
+                </form>
             </div>
         </section>
     )

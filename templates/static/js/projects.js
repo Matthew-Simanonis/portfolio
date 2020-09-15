@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Info from './components/info'
 import Background from './components/Background'
+import ProjectsMain from './components/ProjectsMain'
 
 function App() {
     // States
@@ -21,7 +22,9 @@ function App() {
                 setNavOpen={setNavOpen}
             />
             <div className="projects-home home">
-                <Info />
+                <ProjectsMain 
+                    projects = {projects}    
+                />
             </div>
             <Footer />
         </div>

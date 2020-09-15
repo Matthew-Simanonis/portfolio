@@ -3,4 +3,4 @@ from templates import app
 #Load this config object for development mode
 app.config.from_object('configurations.DevelopmentConfig')
 
-app.run(host='10.0.0.27')
+app.run(host='10.0.0.11')
