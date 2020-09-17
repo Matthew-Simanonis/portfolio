@@ -8,11 +8,48 @@
     display: flex;
 }
 
+.project-full-summary {
+    display: flex;
+}
+
 .project-info {
     flex: 1;
+    transition: all 0.3s ease;
+    background: grey; 
 }
 
 .project-full-image {
     width: 30%;
     height: 200px;
+}
+
+
+.info-text{
+    font-size: 0em;
+}
+
+.info-title {
+    display: flex;
+    align-items: center;
+    padding: .2rem;
+}
+
+.info-title h3 {
+    flex: 1;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    margin-right: 1em;
+}
+
+/* Effects */
+.show-text{
+    font-size: 1em;
+}
+
+.rotate-arrow {
+    transform: rotate(90deg)
 }

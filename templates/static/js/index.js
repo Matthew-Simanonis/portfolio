@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import FadeIn from 'react-fade-in';
 
 //Import Components
 import Nav from './components/Nav'
@@ -14,7 +15,6 @@ function App() {
     // States
     const [inputText, setInputText] = useState('')
     const [navOpen, setNavOpen] = useState(false);
-    const [selected, setSelected] = useState('0');
     const projects = require('./components/data/projects.json');
 
     // Add components to div
@@ -26,18 +26,18 @@ function App() {
                 setNavOpen={setNavOpen}
             />
             <div className="home">
-                <Info />
-                <Projects 
-                    projects={projects}
-                    selected={selected}
-                    setSelected={setSelected}
-                />
-                <Skills />
-                <About />
-                <Form
-                    inputText={inputText} 
-                    setInputText={setInputText} 
-                />
+                <FadeIn delay={100}>
+                    <Info />
+                    <Projects 
+                        projects={projects}
+                    />
+                    <Skills />
+                    <About />
+                    <Form
+                        inputText={inputText} 
+                        setInputText={setInputText} 
+                    />
+                </FadeIn>
             </div>
             <Footer />
         </div>

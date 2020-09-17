@@ -6,37 +6,41 @@
     "description": "A simple betting application made for my father. The user selects the horses recent placements and the app calculates scores",
     "url" : "http://horsebets-env.eba-4r8mqs2p.us-east-2.elasticbeanstalk.com/",
     "picture": "horse-bets",
-    "challenges" : "",
+    "challenges" : "I wanted to make everything run without needing to reload the page. This led me to wripting code my first app with JavaScript. While syntax was never an issue, getting a grip on the JavaScript/HTML interaction was tough.",
+    "languages" : "HTML/CSS, Javascript, Python",
     "code" : "https://github.com/Matthew-Simanonis/horse-bets"
    },
    {
     "title": "Album Anniversary",
     "id": "1",
     "summary" : "An email reminder system for Album Birthdays",
-    "description": "",
+    "description": "This app notifies the user with an email when it is the anniversary of an album in their collection. Notification includes the age, a summary of the album and the album art.",
     "url" : "",
     "picture": "album-anniversary",
-    "challenges" : "",
+    "challenges" : "This was my first real program. So naturally everything was a challenge. A big one was how to find album anniversaries in a common format and the possibility of albums with the same name. Luckily my personal album list wasn't affected",
+    "languages" : "Python",
     "code" : "https://github.com/Matthew-Simanonis/AlbumAnniversaryApp"
    },
    {
     "title": "MACD-Alerts",
     "id": "2",
     "summary" : "A stock watching app that notifies of STOCH/MACD crossover in a set of selected stocks",
-    "description": "This app is bad. pretty much broken",
+    "description": "An app that scans a users stock portfolio for a Stochastic/MACD double crossover and emails the user with a relative buy or sell signal.",
     "url" : "",
     "picture": "ethchart",
-    "challenges" : "",
+    "challenges" : "A lot of the challenge for this program came in getting the circles to line up. They needed to keep track of the Y value on the graph, and as my coding skills were limited, I most likely took the long route. But it still looks good.",
+    "languages" : "Python",
     "code" : "https://github.com/Matthew-Simanonis/MacdSignal"
    },
    {
     "title": "Portfolio",
     "id": "3",
     "summary" : "My own website. You are looking at it. I coded everything",
-    "description": "This app is bad. pretty much broken",
+    "description": "A website to display my experience and skills. Contains my portfolio and information about me, Matthew Simanonis",
     "url" : "",
     "picture": "ethchart",
-    "challenges" : "",
+    "challenges" : "It was defintetly a challenged to try and make my site look pretty, and functional. I also wanted to create my own carousel, so making that was a learning experience. Worth it though!",
+    "languages" : "HTML/CSS, Javascript, Python, React.js",
     "code" : "https://github.com/Matthew-Simanonis/portfolio"
    }
  ]

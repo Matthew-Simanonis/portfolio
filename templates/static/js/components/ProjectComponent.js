@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 
-const Project = ({ project, selected, setSelected }) => {
+const Project = ({ project }) => {
 
     const [dropDown, setDropDown] = useState(false)
 
     const select = () => {
-        setSelected(selected = project.id)
         setDropDown(true)
     }
 
     const deselect = () => {
-        setSelected(selected = '-1')
         setDropDown(false)
     }
 

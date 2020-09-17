@@ -3,14 +3,12 @@ import React, { useState,useEffect } from 'react';
 //Import Components
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import Info from './components/info'
 import Background from './components/Background'
 import ProjectsMain from './components/ProjectsMain'
 
 function App() {
     // States
     const [navOpen, setNavOpen] = useState(false);
-    const [selected, setSelected] = useState('0');
     const projects = require('./components/data/projects.json');
 
     // Add components to div

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Project from './ProjectComponent'
 
-const Projects = ({ projects, selected, setSelected } ) => {
+const Projects = ({ projects } ) => {
     const scrollCapture = (el) => {
         let tar = el.target;
     }
@@ -29,8 +29,6 @@ const Projects = ({ projects, selected, setSelected } ) => {
                             <Project 
                                 project={project}
                                 key={project.id}
-                                selected={selected}
-                                setSelected={setSelected}
                             />
                         ))}
                     </div>
