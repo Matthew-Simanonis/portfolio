@@ -4,8 +4,7 @@ import FadeIn from 'react-fade-in';
 
 const ProjectsMain = ({ projects }) => {
     return(
-        <div className='project-main'>
-            <FadeIn delay={100}>
+            <FadeIn delay={100} className='projects-container'>
                 <h1>Projects</h1>
                 {projects.projects.map(project=> (
                     <ProjectFull 
@@ -14,7 +13,6 @@ const ProjectsMain = ({ projects }) => {
                     />
                 ))}
             </FadeIn>
-        </div>
     )
 }
 

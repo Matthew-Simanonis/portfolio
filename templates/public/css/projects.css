@@ -1,4 +1,4 @@
-.project-main h1{
+.projects-container h1{
     color: rgb(255, 154, 60);
     font-size: 2.3em;
     text-align: center;
@@ -7,7 +7,8 @@
 .project-full {
     -webkit-transform: translate3d(0,0,0);
     padding: .5rem;
-    margin: 2rem .5rem;
+    margin: 2rem auto;
+    max-width: 400px;
     border-radius: 1em;
     background: rgba(71, 187, 158, 0.7);
 }
@@ -75,6 +76,11 @@
 .info-title h3 {
     flex: 1;
     font-weight: 650;
+    cursor: pointer;
+}
+
+.chosen {
+    color: rgb(9, 88, 69);
 }
 
 .dropdown-arrow {
@@ -82,6 +88,11 @@
     transition: all 0.3s ease;
     transform-origin: center;
     margin-right: 1em;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Effects */

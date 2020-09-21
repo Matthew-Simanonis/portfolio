@@ -404,12 +404,18 @@ nav {
 }
 
 /* Skills */
-.skills-container h1 {
+#skill-section h1 {
     margin: auto;
     padding: .6rem 1rem;
     text-align: center;
     color: var(--primary-color);
     font-size: 2em;
+}
+
+.skills-container {
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .skill {
@@ -420,6 +426,7 @@ nav {
     border-radius: 10%;
     padding: 1rem;
     position: relative;
+    max-width: 350px;
 }
 
 .skill h1{
@@ -506,110 +513,6 @@ nav {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, .5);
     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
-
-@media screen and (min-width: 52em) {
-    /* Main */
-    .app {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    body{
-        font-size: 2rem;
-    }
-    
-    .home {
-        max-width: 1400px;
-        align-self: center;
-    }
-
-    /* Background */
-    .dna {
-        top: 13%;
-        height: 110%;
-        left: 30%;
-    }
-
-    .molecules2{
-        top: 0;
-        left: 0;
-    }
-    
-    header h1{
-        font-size: 4rem;
-    }
-    
-    /* NavBar */
-    .ms {
-        font-size: 3rem;
-    }
-    
-    .links{
-        position: relative;
-        -webkit-transform: translate3d(0,0,0);
-        z-index: 21;
-        right: 0;
-        top: 0;
-        background: none;
-        flex: 1;
-    }
-
-    .portfolio-btn {
-        display: none;
-    }
-
-    .nav-links li {
-        padding: 0 2rem;
-    }
-
-    .hamburger {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex;
-        min-height: 30px;
-    }
-
-    form input,
-    form button {
-        padding: 0.5rem;
-        font-size: 2rem;
-        border: none;
-        background: whitesmoke;
-    }
-
-    /* Projects  */
-    .projects-carousel {
-        justify-content: center;
-    }
-
-    .projects {
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        width: 80%;
-        align-self: center;
-    }
-
-    .project {
-        width: 300px;
-        border: none;
-        height: 450px;
-        margin: 1rem;
-    }
-
-    .project-dropdown {
-        top: -45rem;
-    }
-
-    .arrow {
-        display: none;
-    }
-
-    .skills-container {
-        display: flex;
-    }
 }
 
 /* Effects */

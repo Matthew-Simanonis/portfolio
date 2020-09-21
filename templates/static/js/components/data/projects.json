@@ -28,7 +28,7 @@
     "description": "An app that scans a users stock portfolio for a Stochastic/MACD double crossover and emails the user with a relative buy or sell signal.",
     "url" : "",
     "picture": "ethchart",
-    "challenges" : "A lot of the challenge for this program came in getting the circles to line up. They needed to keep track of the Y value on the graph, and as my coding skills were limited, I most likely took the long route. But it still looks good.",
+    "challenges" : "A lot of the challenge for this program came in getting the circles on the graph in the right spot. They needed to keep track of the Y value on the graph, and as my coding skills were limited, I most likely took the long route. But it still looks good. ",
     "languages" : "Python",
     "code" : "https://github.com/Matthew-Simanonis/MacdSignal"
    },

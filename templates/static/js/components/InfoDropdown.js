@@ -11,9 +11,9 @@ const InfoDropdown = ({ info, content }) => {
 
     return (      
         <div className={info}>
-            <div className='info-title'>
+            <div className={`info-title ${dropDown ? "chosen" : ""}`}>
                 <h3 onClick={select}>{title}</h3>
-                <i className={`fas fa-angle-right dropdown-arrow ${dropDown ? "rotate-arrow" : ""}`}></i>
+                <i className={`fas fa-angle-right dropdown-arrow ${dropDown ? "rotate-arrow chosen" : ""}`}></i>
             </div>
             <div className={`project-info info-text ${dropDown ? "show-text" : ""}`}>
                 <p className='challenges' onClick={select}>{content}</p>

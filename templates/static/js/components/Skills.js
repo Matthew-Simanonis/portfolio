@@ -5,9 +5,9 @@ import SkillImages from './SkillImages'
 const Skills = () => {
     
     return (
-        <section>
+        <section id='skill-section'>
+            <h1>Skills</h1>
             <div className='skills-container'>
-                <h1>Skills</h1>
                 <div className='skill' id='front-end'>
                     <SkillImages 
                         languages = {['html', 'css', 'js', 'react']}

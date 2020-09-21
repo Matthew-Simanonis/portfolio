@@ -6,9 +6,6 @@ const ProjectFull = ({ project }) => {
 
     const [dropDown, setDropDown] = useState(false);
 
-    const select = () => {
-        setDropDown(!dropDown)
-    }
 
     return (
         <div className={`project-full`}>

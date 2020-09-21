@@ -1,6 +1,8 @@
-from templates import app
+from templates import application
 
 #Load this config object for development mode
-app.config.from_object('configurations.DevelopmentConfig')
+application.config.from_object('configurations.ProductionConfig')
 
-app.run(host='10.0.0.11')
+
+if __name__ == "__main__":
+    application.run()
