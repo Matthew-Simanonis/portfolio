@@ -38,7 +38,7 @@
     "summary" : "My own website. You are looking at it. I coded everything",
     "description": "A website to display my experience and skills. Contains my portfolio and information about me, Matthew Simanonis",
     "url" : "",
-    "picture": "ethchart",
+    "picture": "portfolio",
     "challenges" : "It was defintetly a challenged to try and make my site look pretty, and functional. I also wanted to create my own carousel, so making that was a learning experience. Worth it though!",
     "languages" : "HTML/CSS, Javascript, Python, React.js",
     "code" : "https://github.com/Matthew-Simanonis/portfolio"

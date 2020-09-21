@@ -1,28 +1,66 @@
+.project-main h1{
+    color: rgb(255, 154, 60);
+    font-size: 2.3em;
+    text-align: center;
+}
+
 .project-full {
-    padding: 1rem;
-    margin: 2rem 1rem;
-    background: rgb(50, 165, 136);
+    -webkit-transform: translate3d(0,0,0);
+    padding: .5rem;
+    margin: 2rem .5rem;
+    border-radius: 1em;
+    background: rgba(71, 187, 158, 0.7);
 }
 
 .project-full-item {
     display: flex;
 }
 
+.project-full-title {
+    font-size: 1.5em;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    padding: .5em 0;
+    background: rgb(62, 99, 97, .8);
+    width: 100%;
+    font-weight: 800;
+    text-align: center;
+}
 .project-full-summary {
     display: flex;
+    padding: .5em;
+    min-height: 250px;
+}
+
+.summary {
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+    margin-right: .5em;
+    background: rgb(142, 226, 198, .6);
+    border-radius: 1em;
+}
+
+.summary p {
+    font-size: 1.2em;
+    z-index: 1;
+}
+
+.project-full-image {
+    width: 42%;
+    height: 240px;
 }
 
 .project-info {
     flex: 1;
     transition: all 0.3s ease;
-    background: grey; 
 }
 
-.project-full-image {
-    width: 30%;
-    height: 200px;
+.project-info p {
+    background: rgb(142, 226, 198, .6);
+    border-radius: 1em;
+    padding: 1em;
 }
-
 
 .info-text{
     font-size: 0em;
@@ -36,6 +74,7 @@
 
 .info-title h3 {
     flex: 1;
+    font-weight: 650;
 }
 
 .dropdown-arrow {

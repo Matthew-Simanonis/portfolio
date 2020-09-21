@@ -13,7 +13,6 @@ import Background from './components/Background'
 
 function App() {
     // States
-    const [inputText, setInputText] = useState('')
     const [navOpen, setNavOpen] = useState(false);
     const projects = require('./components/data/projects.json');
 
@@ -33,10 +32,6 @@ function App() {
                     />
                     <Skills />
                     <About />
-                    <Form
-                        inputText={inputText} 
-                        setInputText={setInputText} 
-                    />
                 </FadeIn>
             </div>
             <Footer />

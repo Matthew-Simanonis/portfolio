@@ -27,7 +27,7 @@ body {
 }
 
 p {
-    color: rgb(228, 228, 228)
+    color: rgb(230, 230, 230)
 }
 
 section {
@@ -176,6 +176,10 @@ nav {
 }
 
 /* Info */
+.info-container{
+    margin-top: 1em;
+}
+
 .name {
     line-height: 3.3rem;
     font-size: 3rem;
@@ -208,8 +212,29 @@ nav {
 
 .footer {
     background: var(--accent1-color);
-    align-self: flex-end;
+    display: flex;
     text-align: center;
+    justify-content: space-around;
+    padding: .5em 0;
+}
+
+
+.footer img {
+    margin: auto;
+    width: 35px;
+    height: 30px;
+}
+
+.footer a{
+    display: flex;
+    justify-content: center;
+}
+
+#github-btn {
+    background: rgb(209, 209, 209);
+    border-radius: 1em;
+    height: 35px;
+    width: 35px;
 }
 
 /* Buttons */
@@ -241,9 +266,10 @@ nav {
 
 .projects-container h1 {
     margin: auto;
-    padding: .2rem 1rem;
+    padding: .6rem 1rem;
     text-align: center;
     color: var(--primary-color);
+    font-size: 2em;
 }
 
 .projects-carousel {
@@ -269,7 +295,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: 190px;
     overflow: hidden;
     -webkit-transform: translate3d(0,0,0);
     border-radius: 10%;
@@ -378,7 +404,16 @@ nav {
 }
 
 /* Skills */
+.skills-container h1 {
+    margin: auto;
+    padding: .6rem 1rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
 .skill {
+    -webkit-transform: translate3d(0,0,0);
     margin: 1rem;
     background: linear-gradient(20deg, var(--button1-color), var(--button2-color), var(--button1-color));
     color: white;
@@ -393,10 +428,17 @@ nav {
 }
 
 .skill ul{
-    list-style: none;
+    margin-left: 2rem;
     display:flex;
     flex-direction: column;
     justify-content: space-around;
+    color: rgb(0, 110, 101);
+    font-weight: 690;
+    font-size: 1.2em;
+}
+
+.skill p{
+    padding: 1em 0;
 }
 
 .skill-images {
@@ -413,9 +455,13 @@ nav {
 }
 
 .skill-images img {
-    width: 2rem;
-    height: 3rem;
+    width: 2em;
+    height: 3em;
     padding: 5%;
+}
+
+#html {
+    left: 10em;
 }
 
 #js-logo {
@@ -446,6 +492,7 @@ nav {
     left: 51%;
     margin-left: 1rem;
     width: 3rem;
+    height: 3rem;
 }
 
 /* Scrollbar */
@@ -587,4 +634,9 @@ nav {
     top: 0;
     z-index: -2;
     background: rgba(10,10,10,.6);
+}
+
+.bad-link {
+    color: grey;
+    text-decoration: none;
 }

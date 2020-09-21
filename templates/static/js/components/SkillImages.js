@@ -6,7 +6,7 @@ const SkillImages = (languages) => {
     }
     return (
         <div className='skill-images'>
-            <div className='skill-images-container'>
+            <div className='skill-images-container' id={languages.languages[0]}>
                 {languages.languages.map(language => (
                     <img id={language + '-logo'} className='skill-image' src={`/public/img/${language}-logo.png`}></img>
                 ))}
