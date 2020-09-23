@@ -95,6 +95,14 @@
     justify-content: space-around;
 }
 
+.project-links a {
+    color: rgb(10, 75, 69);
+}
+
+.project-links a:hover {
+    filter: brightness(50%);
+}
+
 /* Effects */
 .show-text{
     font-size: 1em;

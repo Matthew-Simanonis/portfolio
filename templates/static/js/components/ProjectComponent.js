@@ -22,6 +22,7 @@ const Project = ({ project }) => {
                 <p>{project.summary}</p>
                 <div className='dropdown-links'>
                     <a className='code-link' href={project.code} target="_blank">Code</a>
+                    <a className='view-more' href='/projects' target='_blank'>More Info</a>
                     <a className='demo-link' href={project.url} target="_blank">Live Demo</a>
                 </div>
             </div>

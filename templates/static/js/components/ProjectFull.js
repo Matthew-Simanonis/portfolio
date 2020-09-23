@@ -27,6 +27,10 @@ const ProjectFull = ({ project }) => {
                     info='challenges'
                     content={project.challenges}
                 />
+                <InfoDropdown 
+                    info='Improvements'
+                    content={project.improvements}
+                />
                 <div className='project-links'>
                     <a className='code-link' href={project.code} target="_blank">Code </a>
                     <a className='demo-link' href={project.url} target="_blank">Live Demo</a>

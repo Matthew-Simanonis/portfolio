@@ -5,6 +5,10 @@
         flex-direction: column;
     }
     
+    section {
+        padding: 1rem 3rem;
+    }
+
     body{
         font-size: 2rem;
     }
@@ -31,12 +35,9 @@
     }
     
     /* NavBar */
-    .nav {
-        height: 11vh;
-    }
-
     .ms {
         font-size: 3rem;
+        margin-left: 1rem;
     }
     
     .links{
@@ -72,9 +73,7 @@
         padding: 0.5rem;
         font-size: 2rem;
         border: none;
-        background: whitesmoke;
     }
-
 
     /* Info  */
     .info-container {
@@ -82,12 +81,13 @@
     }
 
     .name {
-        font-size: 5rem;
+        font-size: 7rem;
         padding-top: 12rem;
+        line-height: 6.6rem;
     }
 
     .headline {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     /* Projects  */
@@ -118,6 +118,15 @@
         display: none;
     }
 
+    /* Skills */
+    #puzzle-piece-logo {
+        height: 4rem;
+    }
+
+    #uofi-logo {
+        height: 5em;
+        width: 4em
+    }
 
     /* Projects Page  */
     .project-full {
@@ -142,7 +151,7 @@
     }
 
     .project-full-summary p {
-        margin: auto;
+        margin-top: 3em;
 
     }
 
@@ -156,15 +165,35 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .skill {
         max-width: 500px;
     }
     
+    #html {
+        left: 12em;
+    }
+
     #react-logo {
         height: 3rem;
+    }
+
+    #python-logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Footer */
+    #github-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    #linkedin-btn {
+        width: 60px;
+        height: 50px;
     }
 
     /* Effects */

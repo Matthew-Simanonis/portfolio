@@ -22,7 +22,7 @@ const Skills = () => {
                 </div>
                 <div className='skill'>
                     <SkillImages 
-                        languages = {[]}
+                        languages = {['flask', 'sql']}
                     />
                     <h2>Back-End</h2>
                     <ul className='skill-list'>
@@ -45,6 +45,9 @@ const Skills = () => {
                     <p>Easily interpret and organize data using Python, allowing for custom manipulation and visualization</p>
                 </div>
                 <div className="skill">
+                    <SkillImages
+                        languages = {['puzzle-piece']}
+                    />
                     <h2>Problem Solving</h2>
                     <p>I enjoy problem solving and finding creative solutions. No task seems too large when taken inch by inch</p>
                 </div>

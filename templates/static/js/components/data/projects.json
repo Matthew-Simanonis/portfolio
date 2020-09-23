@@ -3,12 +3,13 @@
     "title": "Horse-Bets",
     "id" : "0",
     "summary" : "A single page Web App, used for getting racing horse odds.",
-    "description": "A simple betting application made for my father. The user selects the horses recent placements and the app calculates scores",
+    "description": "A simple betting application made for my father. The user selects the horses recent placements and the app calculates the top horses",
     "url" : "http://horsebets-env.eba-4r8mqs2p.us-east-2.elasticbeanstalk.com/",
     "picture": "horse-bets",
-    "challenges" : "I wanted to make everything run without needing to reload the page. This led me to wripting code my first app with JavaScript. While syntax was never an issue, getting a grip on the JavaScript/HTML interaction was tough.",
+    "challenges" : "I wanted to make everything run without needing to reload the page. This led me to writing my first app with JavaScript. While syntax was never an issue, getting a grip on the JavaScript/HTML interaction was tough.",
     "languages" : "HTML/CSS, Javascript, Python",
-    "code" : "https://github.com/Matthew-Simanonis/horse-bets"
+    "code" : "https://github.com/Matthew-Simanonis/horse-bets",
+    "improvements" : "I think this page could use a design update. It was one of my first webpages and it is pretty clunky. Making this with React would make my life alot easier so I may re-create the app from scratch."
    },
    {
     "title": "Album Anniversary",
@@ -17,9 +18,10 @@
     "description": "This app notifies the user with an email when it is the anniversary of an album in their collection. Notification includes the age, a summary of the album and the album art.",
     "url" : "",
     "picture": "album-anniversary",
-    "challenges" : "This was my first real program. So naturally everything was a challenge. A big one was how to find album anniversaries in a common format and the possibility of albums with the same name. Luckily my personal album list wasn't affected",
+    "challenges" : "This was my first real program. So naturally everything was a challenge. A big one was how to find album anniversaries in a common format and the possibility of albums with the same name. My solution was to optionally input the Artist name as well. This seemed to bandade the issue for the time being",
     "languages" : "Python",
-    "code" : "https://github.com/Matthew-Simanonis/AlbumAnniversaryApp"
+    "code" : "https://github.com/Matthew-Simanonis/AlbumAnniversaryApp",
+    "improvements" : "I want to create a website with this feature, along with personalized album lists for users. Storing all the album info would be a doozy, and something I would have to find a creative solution for"
    },
    {
     "title": "MACD-Alerts",
@@ -30,7 +32,8 @@
     "picture": "ethchart",
     "challenges" : "A lot of the challenge for this program came in getting the circles on the graph in the right spot. They needed to keep track of the Y value on the graph, and as my coding skills were limited, I most likely took the long route. But it still looks good. ",
     "languages" : "Python",
-    "code" : "https://github.com/Matthew-Simanonis/MacdSignal"
+    "code" : "https://github.com/Matthew-Simanonis/MacdSignal",
+    "improvements" : "I would like to create a website that dynamically allows you to use this app. Possibly allow users to create an account that saves your watchlist and email for a personalized experience. As well using different indicators at different threshholds"
    },
    {
     "title": "Portfolio",
@@ -41,7 +44,8 @@
     "picture": "portfolio",
     "challenges" : "It was defintetly a challenged to try and make my site look pretty, and functional. I also wanted to create my own carousel, so making that was a learning experience. Worth it though!",
     "languages" : "HTML/CSS, Javascript, Python, React.js",
-    "code" : "https://github.com/Matthew-Simanonis/portfolio"
+    "code" : "https://github.com/Matthew-Simanonis/portfolio",
+    "improvements" : "In the future I hope to add more projects, with live demos. The site could probably use a bit of a design cleanup as well. But I hope you like it in its current state!!!"
    }
  ]
 }

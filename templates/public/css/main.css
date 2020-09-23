@@ -18,6 +18,7 @@
     box-sizing: border-box;
   }
 
+
 body {
     color: whitesmoke;
     font-family: "Poppins", sans-serif;
@@ -76,8 +77,8 @@ section {
 /* NavBar */
 nav {
     background: linear-gradient(61deg, rgb(15, 63, 63, .93), var(--background-color));
-    height: 75px;
     z-index: 15;
+    height: 10vh;
     box-shadow: 0px 2px 2px rgba(0, 255, 213, 0.151);
     display: flex;
     top: 0;
@@ -165,7 +166,7 @@ nav {
 }
 
 .nav-links a{
-    color: rgb(236, 236, 236);
+    color: rgb(248, 248, 248);
     text-decoration: none;
 }
 
@@ -185,8 +186,8 @@ nav {
 }
 
 .name {
-    line-height: 3.3rem;
-    font-size: 3rem;
+    line-height: 3.7rem;
+    font-size: 3em;
     padding-top: 2rem;
     color: white;
 }
@@ -204,6 +205,7 @@ nav {
 }
 
 .resume-btn {
+    cursor: pointer;
     padding: .5rem .8rem;
     font-size: 1.6rem;
     border:none;
@@ -214,11 +216,15 @@ nav {
     background: linear-gradient(50deg, var(--accent3-color), rgb(82, 224, 182));
 }
 
+.resume-btn:hover {
+    background: var(--neutral-color);
+    color: var(--accent3-color);
+}
 .footer {
     background: var(--accent1-color);
     display: flex;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: .5em 0;
 }
 
@@ -376,6 +382,10 @@ nav {
     justify-content: space-around;
 }
 
+.dropdown-links a:hover {
+    filter: brightness(75%);
+}
+
 /* Arrows */
 .arrow {
     border-radius: 50%;
@@ -470,6 +480,7 @@ nav {
     width: 2em;
     height: 3em;
     padding: 5%;
+    margin: auto;
 }
 
 #html {
@@ -505,6 +516,40 @@ nav {
     margin-left: 1rem;
     width: 3rem;
     height: 3rem;
+}
+
+#flask {
+    width: 32%;
+}
+
+#flask img{
+    width: 2.5em;
+    height: 3em
+}
+
+#puzzle-piece-logo {
+    filter: grayscale(100%);
+    margin-left: 6rem;
+    height: 3rem;
+    width: 2.5em;
+    margin-top: -.4em;
+}
+
+/* About */
+.about-container {
+    display: flex;
+}
+
+.about img {
+    position: relative;
+}
+
+#uofi-logo {
+    float: right;
+    height: 73px;
+    width: 51px;
+    margin-right: 1rem;
+    margin-top: 1rem;
 }
 
 /* Scrollbar */
