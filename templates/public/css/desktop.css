@@ -6,7 +6,7 @@
     }
     
     section {
-        padding: 1rem 3rem;
+        padding: 1rem;
     }
 
     body{
@@ -14,7 +14,7 @@
     }
     
     .home {
-        max-width: 1400px;
+        max-width: 1500px;
         align-self: center;
     }
 
@@ -79,15 +79,11 @@
     .info-container {
         padding-left: 2rem;
     }
-
-    .name {
-        font-size: 7rem;
+    
+    .name{
+        font-size: 10rem;
         padding-top: 12rem;
-        line-height: 6.6rem;
-    }
-
-    .headline {
-        font-size: 4rem;
+        line-height: 9.6rem;
     }
 
     /* Projects  */

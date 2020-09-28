@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html Lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+        <meta http-equiv="X-UA-Compatable" content="ie=edge"/>
+        <link rel='stylesheet' href='{{ url_for("static", filename="horse-bets/styles/style.css") }}'/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="image_src" href='{{ url_for("static", filename="horse-bets/img/web-thumbnail.png") }}' />
+        <title>Horses</title>
+    </head>
+<body>
+    <header>
+        <div class=logo>      
+            <img src='{{ url_for("static", filename="horse-bets/img/trophy-logo-flipped.png") }}'>
+            <h1>Horse Racing's Finest</h1>
+            <img src='{{ url_for("static", filename="horse-bets/img/trophy-logo.png") }}'>
+        </div>
+        <nav class=nav>
+            <div class="hamburger" id="hamburger">
+            </div>
+            <ul class="nav-links" id='nav-links'>
+                <li><a class=nav-button href='/'>Home</a></li>
+                <li><a class=nav-button href='/'>Apps</a></li>
+                <li><a class=nav-button href='/'>Contact</a></li>
+                <li><a class=nav-button href='/'>About</a></li>
+            </ul>
+        </nav>
+        </header>  
+    </header>
+    <div class='container'>
+        <div class=main>
+            <div class=options>
+                <div class=horse-count>
+                    <span>Horse Count: </span>
+                    <input id=horse-count type="number" value=4 min=4 onclick="this.select()">
+                    <button id='horse-count-button'>Add Horses</button>
+                </div>
+                <div  >
+                    <button class='scoring-button'>Scoring</button>
+                </div>
+            </div>
+            <section>
+                <div class='left'>
+                    <div class=horses-table>
+                        <div class="table-top">
+                            <div>Horse</div><div>Race 1</div><div>Race 2</div><div>Race 3</div><div>Race 4</div><div>Jockey Trainer</div><div>Score</div>
+                        </div>
+                        <ul id="horses-list">
+                        </ul>
+                    </div>
+                </div>
+                <div class='bottom-buttons'>
+                    <div class="submit">
+                        <button id='submit-all' class='button'>Submit</button>
+                    </div>
+                    <div class='reset'>
+                        <button class='button' onClick="window.location.reload();" id='reset'>Reset</button>
+                    </div>
+                </div>
+            </section>
+            <section class='results-container'>
+                    <div class='results'>
+                        <h3>Results</h3>
+                        <ol id='results'>
+                        </ol>
+                    </div>
+            </section>
+            <div id='scoring' class="scoring">
+                <button class='scoring-button' id='scoring-close'>X</button>
+                <h1>Scoring</h1>
+                <div class=rule>
+                    <div class=score-button id=first-scoring>1st</div><span>3 points</span>
+                </div>
+                <div class=rule>
+                    <div class=score-button id=second-scoring>2nd</div><span>2 points</span>
+                </div>
+                <div class=rule>
+                    <div class=score-button id=third-scoring>3rd</div><span>1 points</span>
+                </div>
+                <div class=rule>
+                    <div class=score-button id=fourth-scoring>N/A</div><span>0 points</span>
+                </div>
+                <p>If a Jockey and the horse are the same; Checkbox for 2x points</p> 
+            </div>
+            <script type='text/javascript' src='{{ url_for("static", filename="horse-bets/home.js") }}'></script>
+            <script type='text/javascript' src='{{ url_for("static", filename="horse-bets/radio.js") }}'></script>
+        </div>
+        </div>
+</body>
+<footer>
+    <div>
+        Matthew Simanonis 2020
+    </div>
+    <div>
+        <a href='https://github.com/Matthew-Simanonis/horse-bets'>The Code</a>
+    </div>
+</footer>
+</html>

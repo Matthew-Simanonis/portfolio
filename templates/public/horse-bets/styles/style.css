@@ -1,0 +1,510 @@
+:root{
+    --primary-color:rgba(4, 92, 10, 0.9);
+    --secondary-color:rgba(82, 211, 82, 0.75);
+    --overlay-color:rgba(13, 116, 0, 0.95);
+    --scores-color: rgba(0, 43, 12, 0.95); 
+    --menu-speed:0.75s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 99vw;
+}
+
+header{
+    background: var(--overlay-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 2rem;
+    font-family: none;
+    vertical-align: middle;
+    margin: auto 5px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+header img{
+    max-height: 80px;
+    padding: 3px;
+    align-self: center;
+}
+
+body{
+    font-family: sans-serif;
+    min-height: 100%;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+button {
+    background: rgb(55, 117, 36);
+    color: white;
+    border: black 1px solid;
+    cursor: pointer;
+    padding: .3rem;
+    border-radius: 20%;
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--primary-color);
+    border: solid;
+    border-color: var(--secondary-color);
+}
+
+#horses-list{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+ol {
+    list-style: inside;
+}
+
+.horse {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20vh;
+    border: 1px solid black;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: none;
+}
+
+nav ul {
+    flex: 1;
+    list-style: none;
+    display: flex;
+}
+
+.jockey-trainer input {
+    max-width: 20px;
+    font-size:1.2rem;
+    background: black;
+    color: white;
+}
+
+.horse input[type=radio]{
+    display: none;
+}
+
+.horse label{
+    border-radius: 15%;
+    font-weight: 670;
+}
+
+.horse-count input{
+    text-align: center;
+    
+}
+
+.container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.race {
+    display: flex;
+    font-size: 1.3rem;
+    padding: .2rem;
+    height: 100%;
+    border: solid 1px rgb(0, 34, 0);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.races {
+    width: 95%;
+}
+
+.race-number {
+    align-items: flex-start;
+}
+
+.horse-name img{
+    max-height: 40px;
+    vertical-align: middle;
+}
+
+.horse-name{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 730;
+    color: rgb(217, 207, 243);
+    padding: .2rem;
+}
+
+.left {
+    flex: 1;
+}
+
+.table-top {
+    display: none;
+    justify-content: space-around;
+}
+
+.horse-button {
+    padding: .4rem;
+    cursor: pointer;
+    min-width: 46px;
+}
+
+.bottom-buttons {
+    padding: 1rem;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+}
+
+.horse button {
+    visibility: hidden;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#horse-count {
+    max-width: 40px;
+    background: black;
+    color: white;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid;
+}
+
+.options button{
+    margin: .3rem;
+}
+
+.options div{
+    margin: auto;
+}
+
+.reset{
+    display: inline;
+    right: 0;
+}
+
+.horse:last-of-type button{
+    visibility: visible;
+    pointer-events: all;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.horses-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.races {
+    flex: 2;
+}
+
+.results-container{
+    justify-content: center;
+}
+
+#results {
+    list-style-type: decimal-leading-zero;
+    font-size: 2rem;
+}
+
+.horse-result {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.table-top button{
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox > span {
+    color: #34495E;
+    padding: 0.5rem 0.25rem;
+}
+
+#past-jockey {
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #202720;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: #41B883;
+    cursor: pointer;
+}
+
+#past-jockey:checked{
+    border: 1px solid #41B883;
+    background-color: #34495E;
+}
+
+.checkbox > input:checked + span::before {
+    content: '\2713';
+    display: block;
+    text-align: center;
+    color: #ffeb38;
+    position: absolute;
+    font-size: 1.2rem;
+    left: 0.4rem;
+    bottom: 2px;
+}
+
+.checkbox > input:active {
+    border: 2px solid #34495E;
+}
+
+.jockey-trainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: .3rem;
+}
+
+.horse-score {
+    font-size: 1.5rem;
+    color: yellow;
+    background: black;
+    padding: .2rem;
+    min-width: 54px;
+}
+
+
+nav {
+    min-height: 9vh;
+    margin: auto;
+    width: 95%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.scoring {
+    display: none;
+    opacity: 0;
+}
+
+.scoring.show {
+    max-width: 650px;
+    position: fixed;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    top: 15%;
+    z-index: 2;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--scores-color);
+    border: solid rgba(150, 255, 150, 0.75) 2px;
+}
+
+#scoring-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 1rem;
+}
+
+#additional {
+    min-width: 34px;
+    text-align: center;
+}
+
+.additional-number, .score-label {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.score-button {
+    padding: .4rem;
+    color: white;
+    border: 2px solid;
+    border-radius: 15%;
+    font-weight: 670;
+}
+
+.rule {
+    display: flex;
+    justify-content: space-around;
+    padding: .2rem 0;
+}
+
+#first-scoring{
+    color: black;
+    background: gold;
+    border-color: yellow;
+}
+#second-scoring{
+    color: black;
+    background: silver;
+    border-color: white;
+}
+#third-scoring{
+    color: black;
+    background: rgb(179, 85, 41);
+    border-color: rgb(59, 27, 12);
+}
+#fourth-scoring{
+    color: white;
+    background: rgb(48, 48, 48);
+    border-color: black;
+}
+
+footer a{
+    text-decoration: none;
+    color: grey;
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 1400px) {
+    body{
+        font-size: 2rem;
+    }
+
+    .main {
+        max-width: 1400px;
+    }
+
+    .nav-links {
+        min-height: 30px;
+    }
+    
+    header h1{
+        font-size: 4rem;
+    }
+
+    .horse {
+        min-height: auto;
+        flex-direction: row;
+    }
+
+    .race-number, .additional-number, .score-label{
+        display: none;
+    }
+
+    .horse label {
+        margin: 1px;
+        padding: 3px;
+    }
+
+    .race {
+        display: flex;
+        border: none;
+        height: 100%;
+    }
+    
+    .races {
+        display: flex;
+        flex: 0;
+        margin:auto;
+    }
+
+    .nav .hamburger {
+        display: none;
+    }
+
+
+    nav ul {
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    .horse-name{
+        min-width: 130px;
+    }
+
+    .horse-score {
+        min-width: 100px;
+    }
+
+    .horse input{
+        max-width: 55px;
+        font-size: 2rem;
+    }
+    
+    header img{
+        max-height: 100px;
+    }
+
+    .table-top{
+        display: flex;
+    }
+
+    .horse-score {
+        font-size: 3rem;
+    }
+
+    #additional {
+        font-size: 2rem;
+        min-width: 68px;
+    }
+
+    .horse-result {
+        width: 50%;
+    }
+}

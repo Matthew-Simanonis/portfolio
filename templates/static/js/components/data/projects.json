@@ -4,7 +4,7 @@
     "id" : "0",
     "summary" : "A single page Web App, used for getting racing horse odds.",
     "description": "A simple betting application made for my father. The user selects the horses recent placements and the app calculates the top horses",
-    "url" : "http://horsebets-env.eba-4r8mqs2p.us-east-2.elasticbeanstalk.com/",
+    "url" : "/horse-bets",
     "picture": "horse-bets",
     "challenges" : "I wanted to make everything run without needing to reload the page. This led me to writing my first app with JavaScript. While syntax was never an issue, getting a grip on the JavaScript/HTML interaction was tough.",
     "languages" : "HTML/CSS, Javascript, Python",

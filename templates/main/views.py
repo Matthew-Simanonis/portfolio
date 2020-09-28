@@ -11,3 +11,7 @@ def index():
 @main_blueprint.route('/projects')
 def projects():
  return render_template("projects.html")
+
+@main_blueprint.route('/horse-bets')
+def horse_bets():
+ return render_template("horse-bets.html")
