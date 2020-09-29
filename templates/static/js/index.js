@@ -2,14 +2,13 @@ import React, { useState,useEffect } from 'react';
 import FadeIn from 'react-fade-in';
 
 //Import Components
-import Nav from './components/Nav'
-import Projects from './components/ProjectsComponent'
-import Footer from './components/Footer'
-import Form from './components/Form'
-import Info from './components/info'
-import Skills from './components/Skills'
-import About from './components/About'
-import Background from './components/Background'
+import Nav from './components/main/Nav'
+import Projects from './components/main/ProjectsComponent'
+import Footer from './components/main/Footer'
+import Info from './components/main/info'
+import Skills from './components/main/Skills'
+import About from './components/main/About'
+import Background from './components/main/Background'
 
 function App() {
     // States

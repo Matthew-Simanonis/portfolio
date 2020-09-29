@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from 'react';
 
 //Import Components
-import Nav from './components/Nav'
-import Footer from './components/Footer'
-import Background from './components/Background'
-import ProjectsMain from './components/ProjectsMain'
+import Nav from './components/main/Nav'
+import Footer from './components/main/Footer'
+import Background from './components/main/Background'
+import ProjectsMain from './components/projects/ProjectsMain'
 
 function App() {
     // States
