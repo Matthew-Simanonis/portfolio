@@ -1,15 +1,17 @@
 :root{
-    --primary-color:rgb(155, 233, 213);
+    --primary-color:rgb(86, 214, 182);
     --secondary-color: rgb(12, 13, 58);
     --neutral-color: linear-gradient(rgb(48, 48, 48), rgb(59, 59, 59));
-    --accent1-color: rgb(80, 177, 169);
-    --accent2-color: rgb(243, 143, 28);
-    --accent3-color: rgb(30, 199, 162);
-    --background-color: rgb(15, 37, 37);
-    --background2-color: rgb(15, 87, 87);
-    --button1-color: rgb(142, 226, 198, .6);
-    --button2-color: rgb(193, 253, 233, .6);
+    --accent1-color: rgb(80, 177, 177);
+    --accent2-color: rgb(0, 255, 213);
+    --accent3-color: rgb(30, 199, 190);
+    --background-color: rgb(70, 71, 71);
+    --background2-color: rgb(58, 73, 73);
+    --button1-color: rgba(52, 221, 233, 0.6);
+    --button2-color: rgba(117, 255, 248, 0.747);
     --menu-speed:0.75s;
+    --header-color: rgb(57, 219, 211);
+    --footer-color:rgb(16, 153, 163);
 }
 
 * {
@@ -28,7 +30,7 @@ body {
 }
 
 p {
-    color: rgb(230, 230, 230)
+    color: rgb(243, 243, 243)
 }
 
 section {
@@ -76,10 +78,10 @@ section {
 
 /* NavBar */
 nav {
-    background: linear-gradient(61deg, rgb(15, 63, 63, .93), var(--background-color));
+    background: linear-gradient(61deg, rgba(16, 24, 24, 0.93), var(--background-color));
     z-index: 15;
     height: 10vh;
-    box-shadow: 0px 2px 2px rgba(0, 255, 213, 0.151);
+    box-shadow: 0px 2px 2px rgba(0, 225, 255, 0.151);
     display: flex;
     top: 0;
     position: sticky;
@@ -99,7 +101,7 @@ nav {
 
 .ms {
     display: inline;
-    background: linear-gradient(var(--accent2-color), rgb(240, 202, 33));
+    background: linear-gradient(var(--accent2-color), rgb(8, 188, 201));
     border-radius: 30%;
     font-size: 1.6rem;
     padding: .1rem .2rem;
@@ -171,7 +173,7 @@ nav {
 }
 
 .nav-links a:hover{
-    color: rgb(255, 151, 15);
+    color: rgb(48, 233, 247);
 }
 
 /* Main */
@@ -196,7 +198,7 @@ nav {
     font-size: 1.6rem;
     padding-top: 1rem;
     align-self: flex-end;
-    color: rgb(14, 196, 180);
+    color: var(--header-color);
 }
 
 .resume {
@@ -221,7 +223,7 @@ nav {
     color: var(--accent3-color);
 }
 .footer {
-    background: var(--accent1-color);
+    background: var(--footer-color);
     display: flex;
     text-align: center;
     justify-content: space-evenly;
@@ -263,6 +265,7 @@ nav {
 }
     
 .btn:hover {
+
     background: var(--neutral-color);
     color: var(--accent1-color);
 }
@@ -278,7 +281,7 @@ nav {
     margin: auto;
     padding: .6rem 1rem;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--header-color);
     font-size: 2em;
 }
 
@@ -353,7 +356,7 @@ nav {
     -webkit-transform: translate3d(0,0,0);
     position: relative;
     height: 100%;
-    top: -18rem;
+    top: -20rem;
     transition: all .3s ease;
     z-index: 2;
     display: flex;
@@ -370,7 +373,7 @@ nav {
 .project-dropdown a{
     text-align: center;
     color: var(--accent1-color);
-    font-size: 1rem;
+    font-size: .7rem;
 }
 
 .project-dropdown p{
@@ -423,7 +426,7 @@ nav {
     margin: auto;
     padding: .6rem 1rem;
     text-align: center;
-    color: var(--primary-color);
+    color: var(--header-color);
     font-size: 2em;
 }
 

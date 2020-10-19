@@ -1,5 +1,5 @@
 .projects-container h1{
-    color: rgb(255, 154, 60);
+    color:  rgb(57, 219, 211);
     font-size: 2.3em;
     text-align: center;
 }
@@ -10,7 +10,7 @@
     margin: 2rem auto;
     max-width: 400px;
     border-radius: 1em;
-    background: rgba(71, 187, 158, 0.7);
+    background: rgb(10, 10, 10);
 }
 
 .project-full-item {
@@ -22,7 +22,7 @@
     border-top-left-radius: .5em;
     border-top-right-radius: .5em;
     padding: .5em 0;
-    background: rgb(62, 99, 97, .8);
+    background: rgba(38, 61, 70, 0.8);
     width: 100%;
     font-weight: 800;
     text-align: center;
@@ -38,7 +38,7 @@
     justify-content: center;
     padding: .5em;
     margin-right: .5em;
-    background: rgb(142, 226, 198, .6);
+    background: rgba(78, 221, 226, 0.6);
     border-radius: 1em;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .project-info p {
-    background: rgb(142, 226, 198, .6);
+    background: rgba(38, 61, 70, 0.8);
     border-radius: 1em;
     padding: 1em;
 }
@@ -80,7 +80,7 @@
 }
 
 .chosen {
-    color: rgb(9, 88, 69);
+    color: rgb(18, 196, 202);
 }
 
 .dropdown-arrow {
@@ -96,11 +96,12 @@
 }
 
 .project-links a {
-    color: rgb(10, 75, 69);
+    color: rgb(10, 71, 75);
+    font-size: 1.3em;
 }
 
 .project-links a:hover {
-    filter: brightness(50%);
+    filter: brightness(150%);
 }
 
 /* Effects */

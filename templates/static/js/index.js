@@ -5,7 +5,7 @@ import FadeIn from 'react-fade-in';
 import Nav from './components/main/Nav'
 import Projects from './components/main/ProjectsComponent'
 import Footer from './components/main/Footer'
-import Info from './components/main/info'
+import Info from './components/main/Info'
 import Skills from './components/main/Skills'
 import About from './components/main/About'
 import Background from './components/main/Background'

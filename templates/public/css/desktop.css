@@ -86,6 +86,10 @@
         line-height: 9.6rem;
     }
 
+    .headline {
+        font-size: 2.6rem;
+    }
+
     /* Projects  */
     .projects-carousel {
         justify-content: center;
@@ -114,6 +118,10 @@
         display: none;
     }
 
+    .dropdown-links a {
+        font-size: .6em;
+    }
+
     /* Skills */
     #puzzle-piece-logo {
         height: 4rem;
@@ -122,6 +130,11 @@
     #uofi-logo {
         height: 5em;
         width: 4em
+    }
+
+    /* About */
+    .about {
+        padding: 4rem;
     }
 
     /* Projects Page  */
@@ -142,13 +155,17 @@
         width: 100vw;
     }
 
+    .project-full-title {
+        font-size: 2.3em;
+    }
+
     .project-full-summary {
         text-align: center;
     }
 
     .project-full-summary p {
-        margin-top: 3em;
-
+        margin-top: 1em;
+        font-size: 1.7em;
     }
 
     .project-full-image {
@@ -156,16 +173,22 @@
         width: 33%;
     }
 
+    .info-title h3 {
+        font-size: 2rem;
+    }
+
+
     /* Skills */
     .skills-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         font-size: 1.5rem;
+        padding: 0 6rem;
     }
 
     .skill {
-        max-width: 500px;
+        max-width: 450px;
     }
     
     #html {
