@@ -11,8 +11,8 @@ const About = () => {
                     <p>I am a self taught developer, with a B.S. in Molecular and Cellular 
                         Biology, a Minor in Chemistry, and a certificate of Neuroscience from the University of Illinois in Champaign-Urbana.</p>
                     <br></br>
-                    <p>Though I currently aim to be a Profesional Developer, studying Biology is something I cherish, as it taught me strong critical thinking skills, and showed me how cells often think outside of the box, finding creative
-                        solutions for tough problems. Additionally I've always had an appreciation for the ways the scientific community learned new things, and 
+                    <p>Though I currently aim to be a Profesional Developer, studying Biology is something I cherish. It taught me strong critical thinking skills, and showed me how cells often think outside of the box, finding creative
+                        solutions for tough problems. I've always had an appreciation for the ways the scientific community learned new things, and 
                         confirmed their hypthesis; through disciplined study and the collection of enough fool-proof data. This is what drew me to science, 
                         and why I see a future in science, through programming. 
                     </p>

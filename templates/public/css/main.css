@@ -194,6 +194,11 @@ nav {
     color: white;
 }
 
+.phonetics {
+    padding: 0px 0 0rem 10rem;
+    font-size: 1rem;
+}
+
 .headline {
     font-size: 1.6rem;
     padding-top: 1rem;
@@ -203,7 +208,7 @@ nav {
 
 .resume {
     display: flex;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .resume-btn {
@@ -222,6 +227,9 @@ nav {
     background: var(--neutral-color);
     color: var(--accent3-color);
 }
+
+/* Footer */
+
 .footer {
     background: var(--footer-color);
     display: flex;

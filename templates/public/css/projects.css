@@ -30,6 +30,7 @@
 .project-full-summary {
     display: flex;
     padding: .5em;
+    text-align: center;
     min-height: 250px;
 }
 
@@ -96,7 +97,7 @@
 }
 
 .project-links a {
-    color: rgb(10, 71, 75);
+    color: rgb(121, 121, 121);
     font-size: 1.3em;
 }
 

@@ -86,6 +86,11 @@
         line-height: 9.6rem;
     }
 
+    .phonetics {
+        padding: 0px 0 0rem 34rem;
+        font-size: 2rem;
+    }
+
     .headline {
         font-size: 2.6rem;
     }
