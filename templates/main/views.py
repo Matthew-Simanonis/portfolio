@@ -15,3 +15,7 @@ def projects():
 @main_blueprint.route('/horse-bets')
 def horse_bets():
  return render_template("horse-bets.html")
+
+@main_blueprint.route('/research')
+def research():
+ return render_template("research.html")
