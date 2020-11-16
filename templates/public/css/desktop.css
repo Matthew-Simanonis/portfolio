@@ -97,30 +97,40 @@
 
     /* Projects  */
     .projects-carousel {
-        justify-content: center;
         max-width: 1200px;
+        cursor: grab;
     }
 
     .projects {
-        flex-wrap: wrap;
         justify-content: space-evenly;
-        width: 80%;
         align-self: center;
     }
 
     .project {
-        width: 300px;
+        width: 550px;
         border: none;
-        height: 450px;
+        height: 750px;
         margin: 1rem;
     }
 
     .project-dropdown {
-        top: -45rem;
+        top: -48rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .project-dropdown h2{
+        flex: 1;
+        font-size: 2rem;
+    }
+
+    .project-dropdown p {
+        flex: 2;
     }
 
     .arrow {
-        display: none;
+        padding: 1 2;
+        font-size: 80px;
     }
 
     .dropdown-links a {

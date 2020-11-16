@@ -13,11 +13,11 @@ const Project = ({ project }) => {
     }
 
     return (
-        <div className={`project`} id={project.title} onMouseOver={select} onMouseOut={deselect}>
+        <div className={`project no-select`} id={project.title} onMouseOver={select} onMouseOut={deselect}>
             <div className={`project-title`}>
                 {project.title}
             </div>
-            <div className={`project-dropdown ${dropDown ? "show-dropdown" : ""}`}  onClick={deselect}>
+            <div className={`project-dropdown ${dropDown ? "show-dropdown" : ""}` }  onClick={deselect}>
                 <h2>{project.title}</h2>
                 <p>{project.summary}</p>
                 <div className='dropdown-links'>

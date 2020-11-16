@@ -7,7 +7,6 @@ main_blueprint = Blueprint('main',__name__)
 def index():
  return render_template("index.html")
 
-
 @main_blueprint.route('/projects')
 def projects():
  return render_template("projects.html")
@@ -16,6 +15,6 @@ def projects():
 def horse_bets():
  return render_template("horse-bets.html")
 
-@main_blueprint.route('/research')
-def research():
- return render_template("research.html")
+@main_blueprint.route('/MusicCalendar')
+def musiccalendar():
+ return render_template("musiccalendar.html")

@@ -4,7 +4,7 @@ devtool: 'inline-source-map',
 entry: {
        home: __dirname + '/templates/static/js/index.jsx',
        projects: __dirname + '/templates/static/js/projects.jsx',
-       research: __dirname + '/templates/static/js/research.jsx',
+       musiccalendar: __dirname + '/templates/static/js/musiccalendar.jsx',
        vendors: ['react']
      },
 output: {
