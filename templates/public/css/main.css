@@ -187,6 +187,26 @@ nav {
     margin-top: 1em;
 }
 
+.info-container p{
+    margin: 0 1em;
+    font-size: .95em;
+}
+
+
+.info-container h4{
+    padding: 0 0 0 1rem;
+    font-size: 1.6em;
+    font-weight: 800;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 176px;
+    border: solid;
+    height: 237px;
+    margin: 2em 4em 0 4em;
+}
+
 .name {
     line-height: 3.7rem;
     font-size: 3em;
@@ -333,6 +353,7 @@ nav {
     height: 100%;
     position: absolute;
     width: 100%;
+    filter: grayscale(1);
     transition: all .3s ease;
 }
 
@@ -547,6 +568,7 @@ nav {
 }
 
 /* About */
+
 .about-container {
     display: flex;
 }

@@ -1,16 +1,4 @@
 {"projects": [
-    {
-    "title": "Music Calendar",
-    "id" : "6",
-    "summary" : "A web app that reminds users of album birthdays.",
-    "description": "This app notifies the user with an email when it is the anniversary of an album in their collection. Notification includes the age, a summary of the album and the album art",
-    "url" : "/MusicCalendar",
-    "picture": "album-anniversary",
-    "challenges" : "",
-    "languages" : "HTML/CSS, Javascript, Python, React",
-    "code" : "https://github.com/Matthew-Simanonis/horse-bets",
-    "improvements" : ""
-    },
    {
     "title": "Horse-Bets",
     "id" : "0",
