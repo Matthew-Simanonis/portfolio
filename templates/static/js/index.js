@@ -13,7 +13,7 @@ import Background from './components/main/Background'
 function App() {
     // States
     const [navOpen, setNavOpen] = useState(false);
-    const projects = require('./components/data/projects.json');
+    const projects = require('./data/projects.json');
 
     // Add components to div
     return (

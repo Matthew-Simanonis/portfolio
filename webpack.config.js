@@ -5,6 +5,7 @@ entry: {
        home: __dirname + '/templates/static/js/index.jsx',
        projects: __dirname + '/templates/static/js/projects.jsx',
        musiccalendar: __dirname + '/templates/static/js/musiccalendar.jsx',
+       macdalerts: __dirname + '/templates/static/js/macdalerts.jsx',
        vendors: ['react']
      },
 output: {

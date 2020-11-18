@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from "react";
 //Import App
-import App from "./projects"
+import App from "./components/projects/projects"
 
 // Append App to projects.html
 
