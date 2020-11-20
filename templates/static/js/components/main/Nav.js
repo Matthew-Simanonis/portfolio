@@ -22,7 +22,7 @@ const Nav = ({ navOpen, setNavOpen }) => {
                 <ul className={`nav-links`}>
                     <li className='nav-link'><a href="/">Home</a></li>
                     <li className='nav-link'><a href="/projects">Projects</a></li>
-                    <li className='nav-link'><a href="/public/img/Matthew_Simanonis_Resume.pdf" target="_blank">Resume</a></li>
+                    <li className='nav-link'><a href="/public/img/matthew_simanonis_resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </div>
         <div className={`${navOpen ? "darken" : ""}`}></div>

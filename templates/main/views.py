@@ -1,7 +1,5 @@
-from flask import render_template, Blueprint
-import requests, re, csv, math, datetime, smtplib
+from flask import render_template, Blueprint, request, jsonify, make_response
 from .macdalerts import get_graph
-
 
 main_blueprint = Blueprint('main',__name__)
 
@@ -22,7 +20,12 @@ def horse_bets():
 def musiccalendar():
  return render_template("musiccalendar.html")
 
-@main_blueprint.route('/macd-alerts')
+@main_blueprint.route('/macd-alerts', methods=['GET', 'POST'])
 def macdalerts():
-    data = get_graph('ETH-USD')
     return render_template("macdalerts.html")
+
+@main_blueprint.route('/getgraph', methods=['POST'])
+def getgraph():
+    ticker = request.data.decode('UTF-8')
+    data = get_graph(ticker)
+    return data
