@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
+import Options from './options.js'
 var React = require('react');
- 
-var dataPoints = [];
 
-const Graph = ({ stock, prices, dates }) => {
+const Graph = ({ stock, prices, dates, setTimeframe }) => {
     
     const series = [
         {
-            name: stock,
+            name: `${stock}`,
             data: prices,
+            type: 'area'
         }
     ];
     const xaxis = {
@@ -18,18 +18,34 @@ const Graph = ({ stock, prices, dates }) => {
     const options = {
         chart: {
             height: 350,
-            type: 'area'
         },
-        dataLabels: {
-            enabled: false
+        xaxis: {
+            categories: dates,
+            type: 'datetime',
+        },
+        colors: ['#2CB700'],
+        fill: {
+            type: 'gradient', 
+            colors: ['#1ed61e'],
+            gradient: {
+                type: 'vertical',
+                gradientToColors: ['#2CB700'],
+                shadeIntensity: .7,
+                opacityFrom: .9,
+                opacityTo: .7,
+                stops: [0, 90, 100]
+            }
         }
     };
 
     return (
         <section>
-            <h1>{stock}</h1>
+            <Options 
+                setTimeframe={setTimeframe}
+            />
+            <h1>{stock} Price</h1>
             <div className='stock-graph'>
-                <ReactApexChart series={series} options={options} type='area' height='400px' xaxis={xaxis}/>
+                <ReactApexChart series={series} options={options} height='350px'/>
             </div>
         </section>
     );

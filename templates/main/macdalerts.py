@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 
 
-def get_graph(ticker):
+def get_graph(ticker, tf):
     ticker = ticker.replace('"','')
     stock = yf.Ticker(ticker)
-    hist = stock.history(period="2y")
+    hist = stock.history(period=tf)
     prices = hist['Close'].to_list()
     dates =  [d.strftime("%m/%d/%Y") for d in hist.index]
     data = {'prices': prices,

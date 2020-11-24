@@ -24,8 +24,9 @@ def musiccalendar():
 def macdalerts():
     return render_template("macdalerts.html")
 
-@main_blueprint.route('/getgraph', methods=['POST'])
+@main_blueprint.route('/getgraph', methods=['GET', 'POST'])
 def getgraph():
-    ticker = request.data.decode('UTF-8')
-    data = get_graph(ticker)
+    ticker = request.args.get('stock')
+    time = request.args.get('timeframe')
+    data = get_graph(ticker, time)
     return data
