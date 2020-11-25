@@ -3,26 +3,31 @@ import React, { useState, useEffect } from 'react';
 //Import Components
 import Graph from './graph'
 import SearchBar from './searchbar'
-import Options from './options'
 
 function App() {
     // States
     const [input, setInput] = useState('');
-    const [dates, setDates] = useState([])
+    const [dataframe, setDataframe] = useState([])
     const [stock, setStock] = useState('ETH-USD')
-    const [prices, setPrices] = useState([])
     const [timeframe, setTimeframe] = useState(['1y'])
+    const [loaded, setLoaded] = useState(false)
 
     // Add components to div
-    const graphStock = (val) => {
-        setStock(input.toUpperCase())
+    const fetchGraph = () => {
         fetch(`/getgraph?stock=${stock}&timeframe=${timeframe}`)
         .then(response => response.json())
-        .then(data => {
-            setPrices(data.prices);
-            setDates(data.dates)
+            .then(json => {
+                setDataframe(json)
         });
-    };
+        };
+
+    const newStock = () => {
+        setStock(input.toUpperCase())
+    }
+
+    useEffect(() => {
+        fetchGraph();
+    }, [stock, timeframe] )
 
     return (
         <div className="App">
@@ -30,14 +35,13 @@ function App() {
                 input = {input}
                 setInput = {setInput}
             />
-            <button onClick={graphStock}>
+            <button onClick={newStock}>
                 Search
             </button>
             <Graph
                 stock={stock}
+                dataframe = {dataframe}
                 input = {input}
-                prices = {prices}
-                dates = {dates}
                 setTimeframe={setTimeframe}
             />
         </div>

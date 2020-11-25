@@ -1,27 +1,33 @@
 import { useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import Options from './options.js'
+import GraphMacd from './graphmacd'
 var React = require('react');
 
-const Graph = ({ stock, prices, dates, setTimeframe }) => {
-    
+const Graph = ({ stock, dataframe, setTimeframe }) => {
+
+    const currentPrice = '12'
     const series = [
         {
             name: `${stock}`,
-            data: prices,
+            data: dataframe.prices,
             type: 'area'
         }
     ];
-    const xaxis = {
-        categories: dates
-    };
     const options = {
         chart: {
             height: 350,
         },
         xaxis: {
-            categories: dates,
+            categories: dataframe.dates,
             type: 'datetime',
+            labels: {
+                datetimeFormatter: {
+                  month: 'MMM \'yy',
+                  day: 'dd MMM yy',
+                  hour: 'HH:mm'
+                }
+              }
         },
         colors: ['#2CB700'],
         fill: {
@@ -32,8 +38,8 @@ const Graph = ({ stock, prices, dates, setTimeframe }) => {
                 gradientToColors: ['#2CB700'],
                 shadeIntensity: .7,
                 opacityFrom: .9,
-                opacityTo: .7,
-                stops: [0, 90, 100]
+                opacityTo: .6,
+                stops: [0, 100]
             }
         }
     };
@@ -43,10 +49,12 @@ const Graph = ({ stock, prices, dates, setTimeframe }) => {
             <Options 
                 setTimeframe={setTimeframe}
             />
-            <h1>{stock} Price</h1>
+            <h1>{stock}</h1>
+            <h1>Current Price: ${currentPrice}</h1>
             <div className='stock-graph'>
                 <ReactApexChart series={series} options={options} height='350px'/>
             </div>
+            <GraphMacd dataframe={dataframe} stock={stock}/>
         </section>
     );
 }
