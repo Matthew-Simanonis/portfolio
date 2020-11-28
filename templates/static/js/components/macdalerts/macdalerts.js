@@ -7,16 +7,18 @@ import SearchBar from './searchbar'
 function App() {
     // States
     const [input, setInput] = useState('');
-    const [dataframe, setDataframe] = useState([])
+    const [dataframe, setDataframe] = useState({prices: [0]})
     const [stock, setStock] = useState('ETH-USD')
     const [timeframe, setTimeframe] = useState(['1y'])
-    const [loaded, setLoaded] = useState(false)
 
     // Add components to div
     const fetchGraph = () => {
         fetch(`/getgraph?stock=${stock}&timeframe=${timeframe}`)
         .then(response => response.json())
             .then(json => {
+                if (json.prices.length < 1) {
+                    setDataframe({prices: [0]})
+                }
                 setDataframe(json)
         });
         };

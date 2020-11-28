@@ -4,24 +4,31 @@ import json, datetime
 import matplotlib.pyplot as plt
 import yfinance as yf
 
+TIMEFRAME = {'max': 0, '1y' : 365, '1mo' : 30, '2y': 830}
+
 
 def get_graph(ticker, tf):
     ticker = ticker.replace('"','')
     stock = yf.Ticker(ticker)
-    hist = stock.history(period=tf)
+    hist = stock.history(period='max')
     fulldf = addmacd(hist)
+    fulldf = fulldf[-TIMEFRAME[tf]:]
     prices = fulldf['Close'].to_list()
     fiftyma = fulldf['FiftyMA'].to_list()
+    twhohundredma = fulldf['TwohundredMA'].to_list()
     k = fulldf['K2'].to_list()
     d = fulldf['D'].to_list()
     macd = fulldf['MACD'].to_list()
-    dates =  [d.strftime("%m/%d/%Y") for d in hist.index]
+    signal = fulldf['Signal'].to_list()
+    dates =  [d.strftime("%m/%d/%Y") for d in fulldf.index]
     data = {'prices': prices,
             'dates' : dates,
             'fiftyma' : fiftyma,
             'stochk' : k,
             'stochd' : d,
-            'macd' : macd
+            'macd' : macd,
+            'signal' : signal,
+            'twohundredma' : twhohundredma
         }
     data = json.dumps(data, default = myconverter)
     return data

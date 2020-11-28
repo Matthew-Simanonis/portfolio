@@ -2,26 +2,26 @@ import { useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
 var React = require('react');
 
-const GraphMacd = ({ dataframe }) => {
+const GraphStoch = ({ dataframe }) => {
     const series = [
         {
-            name: `MACD`,
-            data: dataframe.macd,
+            name: `K line`,
+            data: dataframe.stochk,
             type: 'line'
         },
         {
-            name: 'signal',
-            data: dataframe.signal,
+            name: 'D line',
+            data: dataframe.stochd,
             type: 'line'
         }
     ];
     const options = {
         title: {
-            text: 'MACD/Signal line'
+            text: 'Stochastic Indicator'
         },
         chart: {
-            id: 'macd',
-            group: 'stock'
+            id: 'stoch',
+            group: 'stoch'
         },
         xaxis: {
             categories: dataframe.dates,
@@ -37,7 +37,7 @@ const GraphMacd = ({ dataframe }) => {
         legend: {
             position: 'top'
         },
-        colors: ['#108fe3', '#fcc203'],
+        colors: ['#fcc203', '#108fe3'],
         yaxis: {
             opposite: true,
             decimalsInFloat: 1,
@@ -45,15 +45,22 @@ const GraphMacd = ({ dataframe }) => {
                 minWidth: 40
             }
         },
+        annotations : {
+            yaxis: [{
+                y: 80,
+                y2: 20,
+                opacity: .2 
+            }]
+        },
         stroke: {
             width: 2
         }
     };
 
     return (
-        <div id='macd-graph'>
+        <div id='stoch-graph'>
             <ReactApexChart series={series} options={options} height='350px'/>
         </div>
     );
 }
-export default GraphMacd;
+export default GraphStoch;
