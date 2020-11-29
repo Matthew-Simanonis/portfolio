@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
-var React = require('react');
+import React from 'react';
 
-const GraphStoch = ({ dataframe }) => {
-    const series = [
+const GraphStoch = React.memo(({ dataframe }) => {
+    const seriesStoch = [
         {
             name: `K line`,
             data: dataframe.stochk,
@@ -15,13 +15,12 @@ const GraphStoch = ({ dataframe }) => {
             type: 'line'
         }
     ];
-    const options = {
+    const optionsStoch = {
         title: {
             text: 'Stochastic Indicator'
         },
         chart: {
             id: 'stoch',
-            group: 'stoch'
         },
         xaxis: {
             categories: dataframe.dates,
@@ -43,7 +42,9 @@ const GraphStoch = ({ dataframe }) => {
             decimalsInFloat: 1,
             labels: {
                 minWidth: 40
-            }
+            },
+            min: 0,
+            max: 100
         },
         annotations : {
             yaxis: [{
@@ -52,6 +53,9 @@ const GraphStoch = ({ dataframe }) => {
                 opacity: .2 
             }]
         },
+        theme: {
+            mode: 'dark'
+        },
         stroke: {
             width: 2
         }
@@ -59,8 +63,8 @@ const GraphStoch = ({ dataframe }) => {
 
     return (
         <div id='stoch-graph'>
-            <ReactApexChart series={series} options={options} height='350px'/>
+            <ReactApexChart series={seriesStoch} options={optionsStoch} height='350px'/>
         </div>
     );
-}
+})
 export default GraphStoch;

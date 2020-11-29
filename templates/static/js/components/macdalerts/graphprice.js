@@ -1,17 +1,14 @@
 import { useEffect } from 'react';
+import React from 'react';
 import ReactApexChart from 'react-apexcharts';
-import Options from './options.js'
-import GraphMacd from './graphmacd'
-import GraphStoch from './graphstoch.js';
-var React = require('react');
 
-const Graph = ({ stock, dataframe, setTimeframe }) => {
 
-    const currentPrice = dataframe.prices.slice(-1)[0]
-    const series = [
+const GraphPrice = React.memo(({ stock, dataframe }) => {
+
+    var series = [
         {
             name: `Close`,
-            data: dataframe.prices,
+            data: dataframe.close,
             type: 'area'
         },
         {
@@ -23,16 +20,25 @@ const Graph = ({ stock, dataframe, setTimeframe }) => {
             name: '200 day MA',
             data: dataframe.twohundredma,
             type: 'line'
+        },      
+        {
+            name: 'Buys',
+            data: dataframe.buys,
+            type: 'line'
+        },
+        {
+            name: 'Sells',
+            data: dataframe.sells,
+            type: 'line'
         }
     ];
-    const options = {
+    var options = {
         title: {
             text: `${stock} Price`
         },
         chart: {
             height: 350,
             id: 'price',
-            group: 'main'
         },
         xaxis: {
             categories: dataframe.dates,
@@ -45,6 +51,23 @@ const Graph = ({ stock, dataframe, setTimeframe }) => {
                 }
               }
         },
+        markers: {
+            size: [0,0,0,3,3],
+            strokeColors: [undefined, undefined, undefined, '#00f014', '#f01400'],
+            fillOpacity: 0
+        },
+        tooltip: {
+            fixed : {
+                enabled: true,
+                position: 'topLeft',
+                offsetX: 10,
+                offsetY: 30
+            },
+            enabledOnSeries : [0,1,2],
+        },
+        noData: {
+            text: 'Loading...'
+        },
         yaxis: {
             opposite: true,
             decimalsInFloat: 2,
@@ -55,7 +78,7 @@ const Graph = ({ stock, dataframe, setTimeframe }) => {
         legend: {
             position: 'top'
         },
-        colors: ['#2CB700', '#3145ad', '#d62811'],
+        colors: ['#2CB700', '#3145ad', '#d62811', '#00f014', '#f01400'],
         fill: {
             type: ['gradient', 'solid', 'solid'], 
             colors: ['#1ed61e'],
@@ -68,25 +91,21 @@ const Graph = ({ stock, dataframe, setTimeframe }) => {
                 stops: [0, 100]
             }
         },
+        theme: {
+            mode: 'dark'
+        },
         stroke: {
-            width: [3, 2, 2]
+            width: [3, 2, 2, 6]
         }
      };
     return (
         <section>
-            <Options 
-                setTimeframe={setTimeframe}
-            />
-            <h1>{stock}</h1>
-            <h1>Current Price: ${currentPrice}</h1>
             <div className='graphs'>
                 <div className='stock-graphs'>
                     <ReactApexChart series={series} options={options} height='350px'/>
                 </div>
-                    <GraphMacd dataframe={dataframe}/>
-                    <GraphStoch dataframe={dataframe}/>
             </div>
         </section>
     );
-}
-export default Graph;
+})
+export default GraphPrice;

@@ -1,27 +1,27 @@
 import { useEffect } from 'react';
+import React from 'react';
 import ReactApexChart from 'react-apexcharts';
-var React = require('react');
 
-const GraphMacd = ({ dataframe }) => {
-    const series = [
+const GraphMacd = React.memo(({ dataframe }) => {
+    const seriesMACD = [
         {
             name: `MACD`,
             data: dataframe.macd,
             type: 'line'
         },
         {
-            name: 'signal',
+            name: 'Signal Line',
             data: dataframe.signal,
             type: 'line'
         }
     ];
-    const options = {
+    const optionsMACD = {
         title: {
             text: 'MACD/Signal line'
         },
         chart: {
             id: 'macd',
-            group: 'stock'
+            group: 'main'
         },
         xaxis: {
             categories: dataframe.dates,
@@ -45,6 +45,9 @@ const GraphMacd = ({ dataframe }) => {
                 minWidth: 40
             }
         },
+        theme: {
+            mode: 'dark'
+        },
         stroke: {
             width: 2
         }
@@ -52,8 +55,8 @@ const GraphMacd = ({ dataframe }) => {
 
     return (
         <div id='macd-graph'>
-            <ReactApexChart series={series} options={options} height='350px'/>
+            <ReactApexChart series={seriesMACD} options={optionsMACD} height='350px'/>
         </div>
     );
-}
+})
 export default GraphMacd;
