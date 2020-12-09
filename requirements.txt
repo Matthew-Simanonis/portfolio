@@ -2,4 +2,6 @@ Flask
 Flask_session
 Flask_debug
 Python-dotenv
-Flask
+pandas
+numpy
+yfinance

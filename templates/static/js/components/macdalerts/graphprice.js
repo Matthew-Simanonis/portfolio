@@ -47,7 +47,9 @@ const GraphPrice = React.memo(({ stock, dataframe }) => {
                 datetimeFormatter: {
                   month: 'MMM \'yy',
                   day: 'dd MMM yy',
-                  hour: 'HH:mm'
+                  
+
+                  
                 }
               }
         },

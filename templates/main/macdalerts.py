@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd 
 import json, datetime
-import matplotlib.pyplot as plt
 import yfinance as yf
 
 TIMEFRAME = {'max': 0, '1y' : 365, '1mo' : 30, '2y': 830}
@@ -33,6 +32,7 @@ def get_graph(ticker, tf):
     buys = fulldf['Buys'].to_list()
     sells = fulldf['Sells'].to_list()
     current = fulldf['Close'][-1]
+    current = round(current, 2)
 
     dates =  [d.strftime("%m/%d/%Y") for d in fulldf.index]
     data = {'close': prices,
