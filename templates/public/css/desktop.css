@@ -204,7 +204,11 @@
 
     .project-full-image {
         height: 300px;
-        width: 33%;
+        width: 100%;
+    }
+
+    .image-link {
+        width: 100%;
     }
 
     .info-title h3 {

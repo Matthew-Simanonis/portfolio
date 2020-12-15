@@ -16,16 +16,22 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
+    text-align: center;
 }
 
 .stock-headings {
     display: flex;
+    padding: 1rem 0;
     flex-direction: column;
 }
 
 .stock-info {
     color: rgb(240, 240, 240);
     text-align: center;
+    flex: 1;
+    margin: auto;
+    border: solid rgb(197, 197, 197);
+    padding: 1rem;
 }
 
 .options {
@@ -38,10 +44,29 @@ body {
 
 .search {
     align-self: flex-end;
-    padding: 0 1em;
+    padding: 1em;
 }
 
 .search button {
     margin: 0 1em;
     padding: .5em 1em;
+}
+
+.loading-spinner {
+    font-size: 2rem;
+    position: fixed;
+    box-shadow: 2px 2px 4px black;
+    background: grey;
+    color: rgb(238, 238, 238);
+    border-radius: 11%;
+    left: 45vw;
+    top: 24vh;
+    padding: 10;
+    z-index: 10;
+}
+
+@media screen and (min-width: 55em) {
+    .stock-headings {
+        flex-direction: row
+    }
 }

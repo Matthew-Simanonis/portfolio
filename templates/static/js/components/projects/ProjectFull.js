@@ -16,7 +16,9 @@ const ProjectFull = ({ project }) => {
                 <div className='summary'>
                     <p>{project.summary}</p>
                 </div>
-                <img className="project-full-image" src={`/public/img/${project.picture}.png`}></img>
+                <a className='image-link' href={`${project.url}`}>
+                    <img className="project-full-image" src={`/public/img/${project.picture}.png`}></img>
+                </a>
             </div>
             <div className='project-info'>
                 <InfoDropdown 
