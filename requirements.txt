@@ -5,3 +5,6 @@ Python-dotenv
 pandas
 numpy
 yfinance
+requests
+datetime
+matplotlib

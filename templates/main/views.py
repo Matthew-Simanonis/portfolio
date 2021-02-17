@@ -1,5 +1,7 @@
 from flask import render_template, Blueprint, request, jsonify, make_response
 from .macdalerts import get_graph
+from .sendAlert import check_stocks
+from .AlbumAnniversary import albumCheck
 
 main_blueprint = Blueprint('main',__name__)
 
@@ -30,3 +32,29 @@ def getgraph():
     time = request.args.get('timeframe')
     data = get_graph(ticker, time)
     return data
+
+@main_blueprint.route('/stockalerts', methods=['GET'])
+def stock_alert():
+    success = check_stocks('c')
+    if success:
+        return '<div>Success! All Stocks Checked</div>'
+    else: 
+        return '<div>FAILURE</div>'
+
+@main_blueprint.route('/stockalerts/<ticker>', methods=['GET'])
+def check_ticker(ticker):
+    success = check_stocks(ticker)
+    if success:
+        return '<div>Success! {ticker} Checked</div>'
+    else: 
+        return '<div>FAILURE</div>'
+
+@main_blueprint.route('/albumalerts', methods=['GET'])
+def check_albums():
+    data = albumCheck('c')
+    success = data['success']
+    date = data['date']
+    if success:
+        return f'<div>{date} Checked</div>'
+    else:
+        return f'<div>No Albums today {date}</div>'

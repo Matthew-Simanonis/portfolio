@@ -6,7 +6,7 @@
     "url" : "/macd-alerts",
     "picture": "webchart",
     "challenges" : "Much of the challenge with this app came with formatting and handling data in a way that worked with different dependencies, as well as two languages. Getting the graphs to load quickly and efficiently is still a challenge I aim to overcome.",
-    "languages" : "Python",
+    "languages" : "Python, HTML/CSS, JavaScript, React.js",
     "code" : "https://github.com/Matthew-Simanonis/MACDAlerts",
     "improvements" : "I would like to add sliders that dynamically allows you to change settings. Possibly allow users to create an account that saves your watchlist and email for a personalized experience. I also would like to find a way to graph the data more efficiently by caching prices, and creating a more responsive graph."
    },
@@ -18,7 +18,7 @@
     "url" : "/horse-bets",
     "picture": "horse-bets",
     "challenges" : "I wanted to make everything run without needing to reload the page. This led me to writing my first app with JavaScript. While syntax was never an issue, getting a grip on the JavaScript/HTML interaction was tough. In order to create many horses, I wrote a loop in javascript to create the appropriate HTML code. This allowed me to create a self made horse component to copy, as the UI for each horse was gonna be the same",
-    "languages" : "HTML/CSS, Javascript, Python",
+    "languages" : "HTML/CSS, JavaScript, Python",
     "code" : "https://github.com/Matthew-Simanonis/horse-bets",
     "improvements" : "I think this page could use a design update. It was one of my first webpages and it is pretty clunky. Making this with React would make my life alot easier so I may re-create the app from scratch."
    },
@@ -42,7 +42,7 @@
     "url" : "",
     "picture": "portfolio",
     "challenges" : "It was defintetly a challenged to try and make my site look pretty, functional and do something that would stand out. I also wanted to create my own carousel, so making that was a learning experience. To create my carousel of projects I wanted to avoid using an existing library, as I enjoy the customizability of something you create yourself, and many of these libraries didnt allow for drag scrolling. I solved this with a clever use of overflow scrolling, and some JavaScript to create arrows.",
-    "languages" : "HTML/CSS, Javascript, Python, React.js",
+    "languages" : "HTML/CSS, JavaScript, Python, React.js",
     "code" : "https://github.com/Matthew-Simanonis/portfolio",
     "improvements" : "In the future I hope to add more projects, with live demos, as some are not on the web yet. The site could probably use a bit of a design cleanup as well."
    }
